@@ -12,7 +12,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='about' element={<About />} />
+        <Route path='/about' element={<About />} />
         <Route path='/projects/:project_id/video' element={<Video />} />
         <Route path='/contact' element={<ContactInfo />} />
       </Routes>
