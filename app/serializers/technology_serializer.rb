@@ -1,3 +1,3 @@
 class TechnologySerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :name
 end
