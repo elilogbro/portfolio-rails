@@ -2,8 +2,10 @@ import Nav from 'react-bootstrap/Nav';
 import { LinkContainer } from 'react-router-bootstrap';
 
 function Navigation() {
+
+
     return (
-        <Nav variant="tabs" className="sticky-top">
+        <Nav variant="tabs" className='sticky-top bg-black'>
             <Nav.Item>
                 <LinkContainer to="/">
                     <Nav.Link>Home</Nav.Link>
