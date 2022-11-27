@@ -3,7 +3,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 function Navigation() {
     return (
-        <Nav variant="tabs" sticky="top">
+        <Nav variant="tabs" className="sticky-top">
             <Nav.Item>
                 <LinkContainer to="/">
                     <Nav.Link>Home</Nav.Link>
