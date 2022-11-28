@@ -12,20 +12,15 @@ import {
     Column,
     Button
 } from '../styles/HomeStyles';
-import MobileHome from '../mobile-components/MobileHome';
 
-function Home({isMobile}) {
+function MobileHome() {
 
     const [clicked, setClicked] = useState(false);
 
     const handleButtonClick = () => {
         setClicked(!clicked)
     }
-
-    if (isMobile) {
-        return <MobileHome />
-    }
-
+    
     return (
         <Container>
             <Col className="text-center">
@@ -65,4 +60,4 @@ function Home({isMobile}) {
     )
 }
 
-export default Home;
+export default MobileHome;

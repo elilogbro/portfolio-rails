@@ -39,24 +39,24 @@ $body-bg: #FAF9F6;
 .text-center {
     text-align-last: start;
     display: flex;
+    height: 100vh;
 }
 
 .routes-container {
     flex-direction: column;
+    height: 100%;
 }
 
 .image {
-    width: 30%;
-    border-radius:50%;
+    width: auto;
+    height: 40%;
     box-shadow: 0.5vw 0 0 0px #00e64d, 1vw 0 0 0px #99F5B7, 1.5vw 0 0 0px #CCFADB;
     margin: 2em;
     margin-right: 6vw;
-    margin-top: 20vh;
 }
 
 .details-container {
-    align-self: self-end;
-    margin-bottom: 7vh;
+    margin: 2em;
     height: 40vh;
     text-align: left;
 }
