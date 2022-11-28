@@ -1,9 +1,15 @@
+import {
+    Container,
+    List,
+    ListItem
+} from '../styles/DropdownStyles';
+
 function Dropdown() {
 
     return (
-        <div className="dropdown">
-            <ul>
-                <li name="view">View</li>
+        <Container>
+            <List>
+                <ListItem>View</ListItem>
                 <a
                     href={'/resume.pdf'}
                     download="EliottBrownResume"
@@ -14,10 +20,10 @@ function Dropdown() {
                         color: 'black'
                     }}
                 >
-                    <li>Download</li>
+                    <ListItem>Download</ListItem>
                 </a>
-            </ul>
-        </div>
+            </List>
+        </Container>
     )
 }
 
