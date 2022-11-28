@@ -11,7 +11,7 @@ function Navigation() {
 
     return (
         <Navbar className="navbar-custom">
-            <Navbar.Brand className="brand-container">Eb</Navbar.Brand>
+            <h2 className="brand-container">Eb</h2>
             <div className="nav-container">
                 <Nav.Item>
                     <LinkContainer to="/">
