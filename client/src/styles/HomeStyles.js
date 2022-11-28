@@ -25,7 +25,7 @@ export const Button = styled.button`
     border-radius: 2px;
     height: 36px;
     line-height: 34px;
-    font-size: 14px;
+    font-size: 1em;
     color: #ffffff;
     background-color: #00C542;
     transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;

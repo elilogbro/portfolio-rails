@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
-import Image from 'react-bootstrap/Image';
-import Col from 'react-bootstrap/Col';
 import { AiFillGithub } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { AiFillMediumCircle } from 'react-icons/ai';
 import { HiViewList } from 'react-icons/hi';
-import Dropdown from './Dropdown';
+import Dropdown from '../components/Dropdown';
 import {
-    Container,
-    LinksContainer,
-    Column,
     Button
 } from '../styles/HomeStyles';
+import {
+    Container,
+    Row,
+    Image,
+    Column,
+    LinksContainer,
+} from '../mobile-styles/MobileHomeStyles';
 
 function MobileHome() {
 
@@ -20,42 +22,39 @@ function MobileHome() {
     const handleButtonClick = () => {
         setClicked(!clicked)
     }
-    
+
     return (
         <Container>
-            <Col className="text-center">
+            <Row>
                 <Image
-                    roundedCircle
-                    fluid
                     src={'/me.jpg'}
                     alt="me"
-                    className="image"
                 />
-                <Col className="details-container">
+                <Row>
                     <h4>Hi there! I'm</h4>
                     <h2><span style={{color: "#00C542"}}>Eliott</span> Brown</h2>
                     <p>A <strong><span style={{color: "#00C542"}}>Full-Stack Software Engineer</span></strong> passionate about creating unique software solutions</p>
                     <LinksContainer>
-                        <Column>
-                            <Button onClick={handleButtonClick}>
-                                Resume <HiViewList />
-                            </Button>
-                            {clicked && <Dropdown />}
-                        </Column>
-                        <Column>
-                            <a href="https://github.com/elilogbro">
-                                <AiFillGithub className="icon" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/eli-in-tech/">
-                                <AiFillLinkedin className="icon" />
-                            </a>
-                            <a href="https://medium.com/@elilogbro">
-                                <AiFillMediumCircle className="icon" />
-                            </a>
-                        </Column>
+                    <Column>
+                        <Button onClick={handleButtonClick}>
+                            Resume <HiViewList />
+                        </Button>
+                        {clicked && <Dropdown />}
+                    </Column>
+                    <Column>
+                        <a href="https://github.com/elilogbro">
+                            <AiFillGithub className="mobile-icon" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/eli-in-tech/">
+                            <AiFillLinkedin className="mobile-icon" />
+                        </a>
+                        <a href="https://medium.com/@elilogbro">
+                            <AiFillMediumCircle className="mobile-icon" />
+                        </a>
+                    </Column>
                     </LinksContainer>
-                </Col>
-            </Col>
+                </Row>
+            </Row>
         </Container>
     )
 }
