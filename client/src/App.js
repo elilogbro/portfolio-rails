@@ -5,6 +5,7 @@ import Video from './components/Video';
 import ContactInfo from './components/ContactInfo';
 import Navigation from './components/Navigation';
 import About from './components/About';
+import ProjectsContainer from './components/ProjectsContainer';
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/projects/:project_id/video' element={<Video />} />
         <Route path='/contact' element={<ContactInfo />} />
+        <Route path='/projects' element={<ProjectsContainer />} />
       </Routes>
     </div>
   );
