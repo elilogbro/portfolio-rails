@@ -1,27 +1,32 @@
 import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap';
+import { AiFillHome } from 'react-icons/ai';
+import { BsFillPersonFill } from 'react-icons/bs';
+import { CgPhone } from 'react-icons/cg';
 
 function Navigation() {
 
 
     return (
-        <Nav variant="tabs" className='sticky-top bg-black'>
+        <Navbar className="navbar-custom">
             <Nav.Item>
-                <LinkContainer to="/">
-                    <Nav.Link>Home</Nav.Link>
-                </LinkContainer>
+            <LinkContainer to="/">
+                <Nav.Link color="white"><AiFillHome /></Nav.Link>
+            </LinkContainer>
             </Nav.Item>
             <Nav.Item>
                 <LinkContainer to="/about">
-                    <Nav.Link>About</Nav.Link>
+                    <Nav.Link><BsFillPersonFill /></Nav.Link>
                 </LinkContainer>
             </Nav.Item>
             <Nav.Item>
                 <LinkContainer to="/contact">
-                    <Nav.Link>Contact</Nav.Link>
+                    <Nav.Link><CgPhone /></Nav.Link>
                 </LinkContainer>
             </Nav.Item>
-        </Nav>
+        </Navbar>
     )
 }
 
