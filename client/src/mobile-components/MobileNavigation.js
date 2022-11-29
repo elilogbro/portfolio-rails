@@ -9,7 +9,7 @@ import { AiOutlinePhone } from 'react-icons/ai';
 function MobileNavigation({hideNav}) {
     
     if (hideNav) {
-        return null
+        return null;
     }
 
     return (
