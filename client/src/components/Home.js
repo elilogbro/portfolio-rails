@@ -45,7 +45,7 @@ function Home({isMobile}) {
                         <Button onClick={handleButtonClick}>
                             Resume <HiViewList />
                         </Button>
-                        {clicked && <Dropdown />}
+                        {clicked && <Dropdown mobile="false"/>}
                     </Column>
                         <Column>
                             <a href="https://github.com/elilogbro">

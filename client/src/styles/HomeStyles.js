@@ -22,12 +22,13 @@ export const Button = styled.button`
     font-weight: 500;
     border: 1px solid transparent;
     border-radius: 1.5em;
-    height: ${props => props.mobile ? "20px" : "36px"};
-    font-size: ${props => props.mobile ? "0.8em" : "1em"};
+    height: ${props => props.mobile ? "5vh" : "fit-content"};
+    width: ${props => props.mobile && "30vw"};
+    font-size: ${props => props.mobile ? "1em" : "1em"};
     color: #ffffff;
     background-color: #00C542;
     transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
-    padding: ${props => props.mobile ? "0 6px" : "0 18px"};
+    padding: ${props => props.mobile ? "1vw 1.5vw" : "0.5vw 1.5vw"};
     :hover {
         color: #ffffff;
         background-color: #00e64d;
