@@ -4,6 +4,7 @@ export const Container = styled.div`
     display: flex;
     flex-flow: column;
     text-align: center;
+    margin-top: 16vh;
 `;
 
 export const LinksContainer = styled.div`

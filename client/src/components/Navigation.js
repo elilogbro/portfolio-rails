@@ -9,7 +9,7 @@ import { AiOutlineAppstore } from 'react-icons/ai';
 import { AiOutlinePhone } from 'react-icons/ai';
 import MobileNavigation from '../mobile-components/MobileNavigation';
 
-function Navigation({isMobile}) {
+function Navigation({isMobile, hideNav}) {
 
     let navigate = useNavigate();
     const pushToProjectsContainer = () => {
@@ -17,7 +17,7 @@ function Navigation({isMobile}) {
     }
 
     if (isMobile) {
-        return <MobileNavigation />;
+        return <MobileNavigation hideNav={hideNav}/>;
     }
 
     return (

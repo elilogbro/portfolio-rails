@@ -6,7 +6,11 @@ import { MdOutlinePersonOutline } from 'react-icons/md';
 import { AiOutlineAppstore } from 'react-icons/ai';
 import { AiOutlinePhone } from 'react-icons/ai';
 
-function MobileNavigation() {
+function MobileNavigation({hideNav}) {
+    
+    if (hideNav) {
+        return null
+    }
 
     return (
         <Navbar className="navbar-mobile">
@@ -16,9 +20,10 @@ function MobileNavigation() {
                         <BiHome
                             style={{
                                 color: 'white',
-                                height: '6vh',
-                                width: '6vw',
-                                margin: '1.25vw'                            }}
+                                height: '10vh',
+                                width: '10vw',
+                                margin: '2vw'
+                            }}
                         />
                     </Nav.Link>
                 </LinkContainer>
@@ -29,9 +34,9 @@ function MobileNavigation() {
                         <AiOutlineAppstore
                             style={{
                                 color: 'white',
-                                height: '6vh',
-                                width: '6vw',
-                                margin: '1.25vw'
+                                height: '10vh',
+                                width: '10vw',
+                                margin: '2vw'
                             }}
                         />
                     </Nav.Link>
@@ -43,9 +48,9 @@ function MobileNavigation() {
                         <MdOutlinePersonOutline
                             style={{
                                 color: 'white',
-                                height: '6vh',
-                                width: '6vw',
-                                margin: '1.25vw'
+                                height: '10vh',
+                                width: '10vw',
+                                margin: '2vw'
                             }}
                         />
                     </Nav.Link>
@@ -57,9 +62,9 @@ function MobileNavigation() {
                         <AiOutlinePhone
                             style={{
                                 color: 'white',
-                                height: '6vh',
-                                width: '6vw',
-                                margin: '1.25vw'
+                                height: '10vh',
+                                width: '10vw',
+                                margin: '2vw'
                             }}
                         />
                     </Nav.Link>
