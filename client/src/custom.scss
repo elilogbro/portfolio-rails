@@ -7,7 +7,7 @@ $body-bg: #FAF9F6;
 .navbar-custom {
     background-color: #00e64d;
     height: 100vh;
-    width: 6vw; 
+    width: 5.25vw; 
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -27,7 +27,7 @@ $body-bg: #FAF9F6;
 .brand-container {
     background-color: #00C542;
     color: white;
-    width: 6vw;
+    width: 5.25vw;
     height: 2em;
     padding-top: 0.5em;
     padding-bottom: 2em;
@@ -43,6 +43,7 @@ $body-bg: #FAF9F6;
     text-align-last: start;
     display: flex;
     height: 100vh;
+    margin-top: 26vh;
 }
 
 .routes-container {
@@ -56,11 +57,11 @@ $body-bg: #FAF9F6;
     box-shadow: 0.5vw 0 0 0px #00e64d, 1vw 0 0 0px #99F5B7, 1.5vw 0 0 0px #CCFADB;
     margin: 2em;
     margin-right: 6vw;
+    margin-left: 10vw;
 }
 
 .details-container {
-    margin: 2em;
-    height: 40vh;
+    margin-top: 14vh;
     text-align: left;
 }
 
