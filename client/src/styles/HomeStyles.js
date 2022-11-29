@@ -13,7 +13,7 @@ export const LinksContainer = styled.div`
 `;
 
 export const Column = styled.div`
-    display: flex;
+
 `
 
 export const Button = styled.button`

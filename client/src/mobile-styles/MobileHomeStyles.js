@@ -24,6 +24,6 @@ export const Image = styled.img`
     width: 50%;
     height: auto;
     border-radius: 50%;
-    box-shadow: 0.5vw 0 0 0px #00e64d, 1vw 0 0 0px #99F5B7, 1.5vw 0 0 0px #CCFADB;
+    box-shadow: 0.6vw 0 0 0px #00e64d, 1.4vw 0 0 0px #99F5B7, 2.2vw 0 0 0px #CCFADB;
     margin: 2em;
 `;

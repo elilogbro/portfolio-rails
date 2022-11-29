@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { LinkContainer } from 'react-router-bootstrap';
@@ -6,26 +5,20 @@ import { BiHome } from 'react-icons/bi';
 import { MdOutlinePersonOutline } from 'react-icons/md';
 import { AiOutlineAppstore } from 'react-icons/ai';
 import { AiOutlinePhone } from 'react-icons/ai';
-import MobileNavigation from '../mobile-components/MobileNavigation';
 
-function Navigation({isMobile}) {
-
-    if (isMobile) {
-        return <MobileNavigation />;
-    }
+function MobileNavigation() {
 
     return (
-        <Navbar className="navbar-custom">
+        <Navbar className="navbar-mobile">
             <Nav.Item>
                 <LinkContainer to="/">
                     <Nav.Link>
                         <BiHome
                             style={{
                                 color: 'white',
-                                height: '4vh',
-                                width: '4vw',
-                                margin: '1.3vh'
-                            }}
+                                height: '6vh',
+                                width: '6vw',
+                                margin: '1.25vw'                            }}
                         />
                     </Nav.Link>
                 </LinkContainer>
@@ -36,9 +29,9 @@ function Navigation({isMobile}) {
                         <AiOutlineAppstore
                             style={{
                                 color: 'white',
-                                height: '4vh',
-                                width: '4vw',
-                                margin: '1.3vh'
+                                height: '6vh',
+                                width: '6vw',
+                                margin: '1.25vw'
                             }}
                         />
                     </Nav.Link>
@@ -50,9 +43,9 @@ function Navigation({isMobile}) {
                         <MdOutlinePersonOutline
                             style={{
                                 color: 'white',
-                                height: '4vh',
-                                width: '4vw',
-                                margin: '1.3vh'
+                                height: '6vh',
+                                width: '6vw',
+                                margin: '1.25vw'
                             }}
                         />
                     </Nav.Link>
@@ -64,9 +57,9 @@ function Navigation({isMobile}) {
                         <AiOutlinePhone
                             style={{
                                 color: 'white',
-                                height: '4vh',
-                                width: '4vw',
-                                margin: '1.3vh'
+                                height: '6vh',
+                                width: '6vw',
+                                margin: '1.25vw'
                             }}
                         />
                     </Nav.Link>
@@ -76,4 +69,4 @@ function Navigation({isMobile}) {
     )
 }
 
-export default Navigation;
+export default MobileNavigation;

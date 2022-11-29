@@ -27,7 +27,7 @@ function App() {
   
   return (
     <div className="app-container">
-      <Navigation />
+      <Navigation isMobile={isMobile}/>
       <Container className="routes-container">
         <Routes>
           <Route

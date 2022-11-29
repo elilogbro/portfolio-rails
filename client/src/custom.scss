@@ -5,9 +5,9 @@ $body-bg: #F5F5F5;
 @import '~bootstrap/scss/bootstrap.scss';
 
 .navbar-custom {
-    background-color: #00e64d;
-    height: 34vh;
-    width: 5.25vw; 
+    background-color: #00C542;
+    height: 38vh;
+    width: 5vw; 
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -39,7 +39,7 @@ $body-bg: #F5F5F5;
 .text-center {
     text-align-last: start;
     display: flex;
-    height: 100vh;
+    height: 74vh;
     margin-top: 26vh;
 }
 
@@ -50,15 +50,14 @@ $body-bg: #F5F5F5;
 
 .image {
     width: auto;
-    height: 40%;
-    box-shadow: 0.5vw 0 0 0px #00e64d, 1vw 0 0 0px #99F5B7, 1.5vw 0 0 0px #CCFADB;
-    margin: 2em;
+    height: 60%;
+    box-shadow: 0.6vw 0 0 0px #00e64d, 1.4vw 0 0 0px #99F5B7, 2.2vw 0 0 0px #CCFADB;
     margin-right: 6vw;
     margin-left: 10vw;
 }
 
 .details-container {
-    margin-top: 14vh;
+    margin-top: 9vh;
     text-align: left;
 }
 
@@ -87,4 +86,20 @@ $body-bg: #F5F5F5;
     margin-top: 0.2vw;
     margin-bottom: 0;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.navbar-mobile {
+    background-color: #00C542;
+    height: 10vh;
+    width: 38vw; 
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    margin-left: 33vw;
+    position: fixed;
+    justify-content: center;
+    border-radius: 2em;
+    vertical-align: middle;
 }
