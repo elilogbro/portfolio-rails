@@ -2,20 +2,37 @@ import React, { useState } from 'react';
 import {
     Container,
     List,
-    ListItem
+    ListItem,
+    ModalContainer,
+    TextContainer
 } from '../styles/DropdownStyles';
+import { Button } from '../styles/HomeStyles';
 import Popup from 'reactjs-popup';
-import { ReactPDF } from '@react-pdf/renderer';
 
 function Dropdown() {
+
+    const [open, setOpen] = useState(false);
+
+    const closeModal = () => setOpen(false);
 
     return (
         <Container>
             <List>
-                <Popup trigger={<ListItem>View</ListItem>} position="right-center" modal>
-                    <object data={'/resume.pdf'} type="application/pdf" width="100%" height="100%">
-                        <p>Alternative text - include a link <a href="http://africau.edu/images/default/sample.pdf">to the PDF!</a></p>
-                    </object>
+                <ListItem onClick={() => setOpen(true)}>View</ListItem>
+                <Popup
+                    position="bottom center"
+                    open={open}
+                    modal
+                    nested
+                    >
+                    <ModalContainer>
+                        <Button modal="true" mobile="true" onClick={() => setOpen(false)}>X</Button>
+                        <object data={'/resume.pdf'} type="application/pdf" width="100%" height="100%">
+                            <TextContainer>
+                                <p style={{width: '70vw', margin: '0', fontSize: 'large'}}>Unable to load on your mobile device, use <a href="https://www.linkedin.com/in/eli-in-tech/overlay/1635508967519/single-media-viewer/">this link!</a></p>
+                            </TextContainer>
+                        </object>
+                    </ModalContainer>
                 </Popup>
                 <a
                     href={'/resume.pdf'}

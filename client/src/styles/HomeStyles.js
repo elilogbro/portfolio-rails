@@ -17,23 +17,21 @@ export const Column = styled.div`
 `
 
 export const Button = styled.button`
-    display: inline-block;
     outline: none;
     cursor: pointer;
     font-weight: 500;
     border: 1px solid transparent;
     border-radius: 2px;
-    height: 36px;
-    line-height: 34px;
-    font-size: 1em;
+    height: ${props => props.mobile ? "20px" : "36px"};
+    font-size: ${props => props.mobile ? "0.8em" : "1em"};
     color: #ffffff;
     background-color: #00C542;
     transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
-    padding: 0 18px;
+    padding: ${props => props.mobile ? "0 6px" : "0 18px"};
     :hover {
         color: #ffffff;
         background-color: #00e64d;
     }
-    margin-right: 3vw;
-    margin-top: 0.5vh;
+    margin-right: ${props => props.modal ? "0.5em" : "3vw"};
+    margin-top: ${props => props.modal ? "0.2em" : "0.5vh"};
 `;
