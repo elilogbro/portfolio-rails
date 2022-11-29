@@ -1,77 +1,72 @@
+import React, { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { LinkContainer } from 'react-router-bootstrap';
-import { AiFillHome } from 'react-icons/ai';
-import { BsFillPersonFill } from 'react-icons/bs';
-import { CgPhone } from 'react-icons/cg';
-import { HiViewGrid } from 'react-icons/hi';
+import { BiHome } from 'react-icons/bi';
+import { MdOutlinePersonOutline } from 'react-icons/md';
+import { AiOutlineAppstore } from 'react-icons/ai';
+import { AiOutlinePhone } from 'react-icons/ai';
 
 function Navigation() {
-
 
     return (
         <Navbar className="navbar-custom">
             <Nav.Item>
-                <h2 className="brand-container">Eb</h2>
+                <LinkContainer to="/">
+                    <Nav.Link>
+                        <BiHome
+                            style={{
+                                color: 'white',
+                                height: '4vh',
+                                width: '4vw',
+                                margin: '0.8vw'
+                            }}
+                        />
+                    </Nav.Link>
+                </LinkContainer>
             </Nav.Item>
-            <div className="nav-container">
-                <Nav.Item>
-                    <LinkContainer to="/">
-                        <Nav.Link>
-                            <AiFillHome
-                                style={{
-                                    color: 'white',
-                                    height: '4vh',
-                                    width: '4vw',
-                                    margin: '0.8vw'
-                                }}
-                            />
-                        </Nav.Link>
-                    </LinkContainer>
-                </Nav.Item>
-                <Nav.Item>
-                    <LinkContainer to="/projects">
-                        <Nav.Link>
-                            <HiViewGrid
-                                style={{
-                                    color: 'white',
-                                    height: '4vh',
-                                    width: '4vw',
-                                    margin: '0.8vw'
-                                }}
-                            />
-                        </Nav.Link>
-                    </LinkContainer>
-                </Nav.Item>
-                <Nav.Item>
-                    <LinkContainer to="/about">
-                        <Nav.Link>
-                            <BsFillPersonFill
-                                style={{
-                                    color: 'white',
-                                    height: '4vh',
-                                    width: '4vw',
-                                    margin: '0.8vw'
-                                }}
-                            />
-                        </Nav.Link>
-                    </LinkContainer>
-                </Nav.Item>
-                <Nav.Item>
-                    <LinkContainer to="/contact">
-                        <Nav.Link>
-                            <CgPhone
-                                style={{
-                                    color: 'white',
-                                    height: '4vh',
-                                    width: '4vw',
-                                    margin: '0.8vw'
-                                }}
-                            />
-                        </Nav.Link>
-                    </LinkContainer>
-                </Nav.Item>
-            </div>
+            <Nav.Item>
+                <LinkContainer to="/projects">
+                    <Nav.Link>
+                        <AiOutlineAppstore
+                            style={{
+                                color: 'white',
+                                height: '4vh',
+                                width: '4vw',
+                                margin: '0.8vw'
+                            }}
+                        />
+                    </Nav.Link>
+                </LinkContainer>
+            </Nav.Item>
+            <Nav.Item>
+                <LinkContainer to="/about">
+                    <Nav.Link>
+                        <MdOutlinePersonOutline
+                            style={{
+                                color: 'white',
+                                height: '4vh',
+                                width: '4vw',
+                                margin: '0.8vw'
+                            }}
+                        />
+                    </Nav.Link>
+                </LinkContainer>
+            </Nav.Item>
+            <Nav.Item>
+                <LinkContainer to="/contact">
+                    <Nav.Link>
+                        <AiOutlinePhone
+                            style={{
+                                color: 'white',
+                                height: '4vh',
+                                width: '4vw',
+                                margin: '0.8vw'
+                            }}
+                        />
+                    </Nav.Link>
+                </LinkContainer>
+            </Nav.Item>
         </Navbar>
     )
 }
