@@ -6,14 +6,13 @@ function ProjectCard({project}) {
     return (
         <div>
             <div>
-                <img src={project.image} alt="website" />
+                <IFrame project={project} />
             </div>
             <h2>{project.name}</h2>
             <p>{project.details}</p>
             <a href={project.github_url}>
                 <AiFillGithub className="icon" />
             </a>
-            <IFrame project={project} />
         </div>
     )
 }
