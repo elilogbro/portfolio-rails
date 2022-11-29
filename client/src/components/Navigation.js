@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { LinkContainer } from 'react-router-bootstrap';
@@ -9,6 +10,11 @@ import { AiOutlinePhone } from 'react-icons/ai';
 import MobileNavigation from '../mobile-components/MobileNavigation';
 
 function Navigation({isMobile}) {
+
+    let navigate = useNavigate();
+    const pushToProjectsContainer = () => {
+        navigate('/projects')
+    }
 
     if (isMobile) {
         return <MobileNavigation />;
@@ -40,6 +46,7 @@ function Navigation({isMobile}) {
                                 width: '4vw',
                                 margin: '1.3vh'
                             }}
+                            onClick={pushToProjectsContainer}
                         />
                     </Nav.Link>
                 </LinkContainer>

@@ -41,7 +41,14 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/projects/:project_id/video' element={<Video />} />
           <Route path='/contact' element={<ContactInfo />} />
-          <Route path='/projects' element={<ProjectsContainer />} />
+          <Route
+            path='/projects'
+            element={
+              <ProjectsContainer
+                isMobile={isMobile}
+              />
+            }
+          />
         </Routes>
       </Container>
     </div>
