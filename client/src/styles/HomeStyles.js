@@ -21,7 +21,7 @@ export const Button = styled.button`
     cursor: pointer;
     font-weight: 500;
     border: 1px solid transparent;
-    border-radius: 2px;
+    border-radius: 1.5em;
     height: ${props => props.mobile ? "20px" : "36px"};
     font-size: ${props => props.mobile ? "0.8em" : "1em"};
     color: #ffffff;
