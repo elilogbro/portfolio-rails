@@ -11,7 +11,9 @@ function Navigation() {
 
     return (
         <Navbar className="navbar-custom">
-            <h2 className="brand-container">Eb</h2>
+            <Nav.Item>
+                <h2 className="brand-container">Eb</h2>
+            </Nav.Item>
             <div className="nav-container">
                 <Nav.Item>
                     <LinkContainer to="/">
@@ -21,7 +23,7 @@ function Navigation() {
                                     color: 'white',
                                     height: '4vh',
                                     width: '4vw',
-                                    margin: '0.7vw'
+                                    margin: '0.8vw'
                                 }}
                             />
                         </Nav.Link>
@@ -35,7 +37,7 @@ function Navigation() {
                                     color: 'white',
                                     height: '4vh',
                                     width: '4vw',
-                                    margin: '0.7vw'
+                                    margin: '0.8vw'
                                 }}
                             />
                         </Nav.Link>
@@ -49,7 +51,7 @@ function Navigation() {
                                     color: 'white',
                                     height: '4vh',
                                     width: '4vw',
-                                    margin: '0.7vw'
+                                    margin: '0.8vw'
                                 }}
                             />
                         </Nav.Link>
@@ -63,7 +65,7 @@ function Navigation() {
                                     color: 'white',
                                     height: '4vh',
                                     width: '4vw',
-                                    margin: '0.7vw'
+                                    margin: '0.8vw'
                                 }}
                             />
                         </Nav.Link>
