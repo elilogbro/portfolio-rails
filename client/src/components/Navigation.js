@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -8,8 +8,11 @@ import { MdOutlinePersonOutline } from 'react-icons/md';
 import { AiOutlineAppstore } from 'react-icons/ai';
 import { AiOutlinePhone } from 'react-icons/ai';
 import MobileNavigation from '../mobile-components/MobileNavigation';
+import { IsMobileContext } from '../context/IsMobileContext';
 
-function Navigation({isMobile, hideNav}) {
+function Navigation({hideNav}) {
+
+    const { isMobile } = useContext(IsMobileContext);
 
     let navigate = useNavigate();
     const pushToProjectsContainer = () => {

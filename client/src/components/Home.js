@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Image from 'react-bootstrap/Image';
 import Col from 'react-bootstrap/Col';
 import { AiFillGithub } from 'react-icons/ai';
@@ -13,9 +13,11 @@ import {
     Button
 } from '../styles/HomeStyles';
 import MobileHome from '../mobile-components/MobileHome';
+import { IsMobileContext } from '../context/IsMobileContext';
 
-function Home({isMobile}) {
+function Home() {
 
+    const { isMobile } = useContext(IsMobileContext);
     const [clicked, setClicked] = useState(false);
 
     const handleButtonClick = () => {

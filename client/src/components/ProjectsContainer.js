@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import ProjectCard from './ProjectCard';
+import {
+    Container
+} from '../styles/ProjectsContainerStyles';
 
 function ProjectsContainer() {
 
@@ -18,9 +21,9 @@ function ProjectsContainer() {
         )
 
     return (
-        <div>
+        <Container>
             {renderProjects}
-        </div>
+        </Container>
     )
 }
 

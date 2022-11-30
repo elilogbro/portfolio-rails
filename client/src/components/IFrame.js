@@ -1,8 +1,17 @@
+import { useContext } from 'react';
+import {
+    Container
+} from '../styles/ProjectCardStyles';
+import { IsMobileContext } from '../context/IsMobileContext';
+
 function IFrame({project}) {
+
+    const { isMobile } = useContext(IsMobileContext);
+
     return (
-        <div>
-            <iframe src={project.video.embed_code} style={{height: '60vh', width: '50vw'}}></iframe>
-        </div>
+        <Container>
+            <iframe src={project.video.embed_code} style={{height: isMobile ? '50vh' : '70vh', width: 'auto'}}></iframe>
+        </Container>
     )
 }
 
