@@ -10,7 +10,7 @@ import { AiOutlinePhone } from 'react-icons/ai';
 import MobileNavigation from '../mobile-components/MobileNavigation';
 import { IsMobileContext } from '../context/IsMobileContext';
 
-function Navigation({hideNav}) {
+function Navigation() {
 
     const { isMobile } = useContext(IsMobileContext);
 
@@ -20,7 +20,7 @@ function Navigation({hideNav}) {
     }
 
     if (isMobile) {
-        return <MobileNavigation hideNav={hideNav}/>;
+        return <MobileNavigation/>;
     }
 
     return (

@@ -10,31 +10,11 @@ import Container from 'react-bootstrap/Container';
 import { IsMobileProvider } from './context/IsMobileContext';
 
 function App() {
-
-  let oldScrollY = 0;
-  const [hideNav, setHideNav] = useState(false);
-
-  const handleHideNav = (e) => {
-    if(window.scrollY > oldScrollY) {
-      setHideNav(true);
-    } else {
-      setHideNav(false);
-    }
-    oldScrollY = window.scrollY;
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleHideNav);
-    return () => {
-        window.removeEventListener('scroll', handleHideNav);
-    };
-  },[]);
-
   
   return (
     <IsMobileProvider>
       <div className="app-container">
-        <Navigation hideNav={hideNav}/>
+        <Navigation/>
         <Container className="routes-container">
           <Routes>
             <Route

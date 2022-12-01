@@ -6,14 +6,10 @@ import { MdOutlinePersonOutline } from 'react-icons/md';
 import { AiOutlineAppstore } from 'react-icons/ai';
 import { AiOutlinePhone } from 'react-icons/ai';
 
-function MobileNavigation({hideNav}) {
-    
-    if (hideNav) {
-        return null;
-    }
+function MobileNavigation() {
 
     return (
-        <Navbar className="navbar-mobile">
+        <Navbar className="navbar-mobile" id="navbar">
             <Nav.Item>
                 <LinkContainer to="/">
                     <Nav.Link>
