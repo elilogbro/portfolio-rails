@@ -27,7 +27,7 @@ export const ModalContainer = styled.div`
     display: flex;
     width: 66vw;
     height: 90vh;
-    margin: 0;
+    // margin-left: 0;
 `;
 
 export const Row = styled.div`
