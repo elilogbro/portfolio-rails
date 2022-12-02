@@ -1,11 +1,20 @@
+import { useContext } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import IFrame from './IFrame';
 import {
     Container,
     SubContainer
 } from '../styles/ProjectCardStyles';
+import { IsMobileContext } from '../context/IsMobileContext';
+import MobileProjectCard from '../mobile-components/MobileProjectCard';
 
 function ProjectCard({project}) {
+
+    const { isMobile } = useContext(IsMobileContext);
+
+    if (isMobile) {
+        return <MobileProjectCard project={project} />
+    }
 
     return (
         <Container>

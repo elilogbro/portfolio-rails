@@ -10,7 +10,7 @@ function IFrame({project}) {
 
     return (
         <Container>
-            <iframe src={project.video.embed_code} style={{height: isMobile ? '50vh' : '70vh', width: 'auto'}}></iframe>
+            <iframe src={project.video.embed_code} style={{height: isMobile ? '28vh' : '41.9vh', width: isMobile ? '100vw' : '36vw'}}></iframe>
         </Container>
     )
 }

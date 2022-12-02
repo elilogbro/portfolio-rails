@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const SubContainer = styled.div`
     flex-direction: column;
     text-align: left;
-    margin-left: 4vw;
+    margin-left: 10vw;
     display: flex;
     gap: 4vh;
 `

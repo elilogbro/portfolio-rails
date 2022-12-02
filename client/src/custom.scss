@@ -37,6 +37,12 @@ $body-bg: #F5F5F5;
     width: 100vw;
 }
 
+.mobile-routes-container {
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+}
+
 .text-center {
     text-align-last: start;
     display: flex;
@@ -47,6 +53,8 @@ $body-bg: #F5F5F5;
 .routes-container {
     flex-direction: column;
     height: 100%;
+    margin: 0;
+    margin-left: 8vw;
 }
 
 .image {

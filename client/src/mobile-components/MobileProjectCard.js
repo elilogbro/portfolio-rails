@@ -14,7 +14,7 @@ function MobileProjectCard({project}) {
                 <h2>{project.name}</h2>
                 <p>{project.details}</p>
                 <a href={project.github_url}>
-                    <AiFillGithub className="icon" style={{width: '8vw', height: '7vh'}}/>
+                    <AiFillGithub className="icon" style={{width: '40vw', height: '8vh'}}/>
                 </a>
             </SubContainer>
         </Container>

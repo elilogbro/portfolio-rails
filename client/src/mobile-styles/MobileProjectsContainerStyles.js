@@ -3,5 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    padding-bottom: 10vh;
+    padding-bottom: 14vh;
+    gap: 6vh;
 `;

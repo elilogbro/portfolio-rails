@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import './custom.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { IsMobileProvider } from './context/IsMobileContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Router>
-    <App />
+    <IsMobileProvider>
+      <App />
+    </IsMobileProvider>
   </Router>
 );
