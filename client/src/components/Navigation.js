@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { LinkContainer } from 'react-router-bootstrap';
@@ -13,11 +12,6 @@ import { IsMobileContext } from '../context/IsMobileContext';
 function Navigation() {
 
     const { isMobile } = useContext(IsMobileContext);
-
-    let navigate = useNavigate();
-    const pushToProjectsContainer = () => {
-        navigate('/projects')
-    }
 
     if (isMobile) {
         return <MobileNavigation/>;
@@ -39,7 +33,6 @@ function Navigation() {
                     <Nav.Link>
                         <AiOutlineAppstore
                             className="nav"
-                            onClick={pushToProjectsContainer}
                         />
                     </Nav.Link>
                 </LinkContainer>
