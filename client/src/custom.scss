@@ -1,6 +1,4 @@
 // Override default variables before the import
-$body-bg: #F5F5F5;
-
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
 
@@ -55,6 +53,7 @@ $body-bg: #F5F5F5;
 .routes-container {
     flex-direction: column;
     height: 100%;
+    width: 100%;
     margin: 0;
     margin-left: 8vw;
 }
@@ -110,7 +109,7 @@ $body-bg: #F5F5F5;
     margin-left: 16vw;
     padding: 0;
     z-index: 1;
-    bottom: 0vh;
+    bottom: 0;
     margin-bottom: 2vh;
     position: fixed;
     justify-content: center;
