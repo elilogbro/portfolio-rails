@@ -16,5 +16,11 @@ export const SubContainer = styled.div`
     gap: 2vh;
 `;
 
+export const SubContainer2 = styled.div`
+    flex-direction: row;
+    text-align: left;
+    display: flex;
+    gap: 0;
+`;
 
 
