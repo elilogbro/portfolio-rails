@@ -5,8 +5,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 6vh;
-    // width: 100vw;
+    gap: 0vh;
 `;
 
 export const SubContainer = styled.div`
@@ -18,9 +17,7 @@ export const SubContainer = styled.div`
 
 export const SubContainer2 = styled.div`
     flex-direction: row;
-    text-align: left;
     display: flex;
-    gap: 0;
 `;
 
 
