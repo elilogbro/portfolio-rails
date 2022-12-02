@@ -11,7 +11,7 @@ function MobileProjectCard({project}) {
         <Container>
             <IFrame project={project} />
             <SubContainer>
-                <h2>{project.name}</h2>
+                <h1>{project.name}</h1>
                 <p>{project.details}</p>
                 <a href={project.github_url}>
                     <AiFillGithub className="icon" style={{width: '40vw', height: '8vh'}}/>

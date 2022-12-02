@@ -9,7 +9,10 @@ export const Container = styled.div`
 `;
 
 export const SubContainer = styled.div`
+    display: flex;
+    flex-direction: column;
     font-size: large;
+    gap: 2vh;
 `;
 
 
