@@ -5,5 +5,5 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     flex-flow: column;
-    width: 100vw;
+    width: 80vw;
 `;

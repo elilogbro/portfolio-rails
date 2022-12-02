@@ -13,11 +13,11 @@ export const IsMobileProvider = ({children}) => {
         else {
           setIsMobile(false)
         }
-      }
+    }
     
-      useEffect(() => {
+    useEffect(() => {
         window.addEventListener("resize", handleResize)
-      }, [])
+    }, [])
 
     return (
         <IsMobileContext.Provider
