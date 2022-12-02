@@ -8,6 +8,12 @@ import {
 } from '../styles/ProjectCardStyles';
 import { IsMobileContext } from '../context/IsMobileContext';
 import MobileProjectCard from '../mobile-components/MobileProjectCard';
+import { FaReact } from 'react-icons/fa';
+import { SiRubyonrails } from 'react-icons/si';
+import { VscJson } from 'react-icons/vsc';
+import { DiRuby } from 'react-icons/di';
+import { FaRedhat } from 'react-icons/fa';
+import { FaCookieBite } from 'react-icons/fa';
 
 function ProjectCard({project}) {
 
@@ -18,7 +24,26 @@ function ProjectCard({project}) {
     }
 
     const renderTechnologies = project && project.technologies.map(technology =>
-        <p>{technology.name}</p>    
+        {
+            if (technology.name === 'React.js') {
+                return <FaReact className="logo"/>
+            }
+            if (technology.name === 'Ruby on Rails') {
+                return <SiRubyonrails className="logo"/>
+            }
+            if (technology.name === 'Custom db.json') {
+                return <VscJson className="logo"/>
+            }
+            if (technology.name === 'Ruby') {
+                return <DiRuby className="logo"/>
+            }
+            if (technology.name === 'Sinatra') {
+                return <FaRedhat className="logo"/>
+            }
+            if (technology.name === 'User Authentication') {
+                return <FaCookieBite className="logo"/>
+            }
+        }
     )
 
     return (
