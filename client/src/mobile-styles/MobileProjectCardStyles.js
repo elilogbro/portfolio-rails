@@ -18,6 +18,8 @@ export const SubContainer = styled.div`
 export const SubContainer2 = styled.div`
     flex-direction: row;
     display: flex;
+    width: fit-content:
+    height: auto;
 `;
 
 
