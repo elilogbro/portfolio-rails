@@ -6,6 +6,7 @@ export const Container = styled.div`
     align-items: center;
     text-align: center;
     gap: 6vh;
+    // width: 100vw;
 `;
 
 export const SubContainer = styled.div`
