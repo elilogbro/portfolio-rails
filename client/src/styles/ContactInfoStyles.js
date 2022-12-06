@@ -13,6 +13,7 @@ export const Input = styled.input`
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
+    width: 16vw;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
@@ -28,4 +29,19 @@ export const Input = styled.input`
     }
 `;
 
-export const
+export const MessageInput = styled(Input)`
+    width: 50vw;
+    height: 10vh;
+`
+
+export const Row = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    margin: 2vh;
+`;
+
+export const Column = styled.div`
+    display: flex;
+    gap: 2vw;
+`;

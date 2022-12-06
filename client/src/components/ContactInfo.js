@@ -2,7 +2,10 @@ import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import {
     Container,
-    Input
+    Input,
+    Row,
+    Column,
+    MessageInput
 } from '../styles/ContactInfoStyles';
 
 function ContactInfo() {
@@ -48,38 +51,42 @@ function ContactInfo() {
   
     return (
       <Container className="contact-form" onSubmit={sendEmail}>
-        <div>
-            <label>Name <span>*</span></label>
-            <Input
-                type="text"
-                name="from_name"
-                value={formData.from_name}
-                onClick={handleMessages}
-                onChange={handleFormChange}
-            />
-            <label>Email <span>*</span></label>
-            <Input
-                type="email"
-                name="from_email"
-                value={formData.from_email}
-                onClick={handleMessages}
-                onChange={handleFormChange}    
-            />
-        </div>
-        <div>
+        <Row>
+            <Column>
+                <label>Name <span>*</span></label>
+                <Input
+                    type="text"
+                    name="from_name"
+                    value={formData.from_name}
+                    onClick={handleMessages}
+                    onChange={handleFormChange}
+                />
+            </Column>
+            <Column>
+                <label>Email <span>*</span></label>
+                <Input
+                    type="email"
+                    name="from_email"
+                    value={formData.from_email}
+                    onClick={handleMessages}
+                    onChange={handleFormChange}    
+                />
+            </Column>
+        </Row>
+        <Row>
             <label>Message <span>*</span></label>
-            <Input
+            <MessageInput
                 type="text"
                 name="message"
                 value={formData.message}
                 onClick={handleMessages}
                 onChange={handleFormChange}
             />
-        </div>
+        </Row>
         <Input type="submit" value="Send" />
         {/* <div class="g-recaptcha" data-sitekey="6LcOSF4jAAAAAHJx88mdVNetu4rHhViMOuVOt6nR"></div> */}
-        {error && <div>{error}</div>}
-        {confirmation && <div>{confirmation}</div>}
+        {error && <Row>{error}</Row>}
+        {confirmation && <Row>{confirmation}</Row>}
       </Container>
     );
   }
