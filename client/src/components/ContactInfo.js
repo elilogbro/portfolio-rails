@@ -5,8 +5,13 @@ import {
     Input,
     Row,
     Column,
-    MessageInput
+    MessageInput,
+    Button,
+    Required,
+    MsgContainer
 } from '../styles/ContactInfoStyles';
+import { AiFillExclamationCircle } from 'react-icons/ai';
+import { BsHandThumbsUp } from 'react-icons/bs';
 
 function ContactInfo() {
 
@@ -53,7 +58,7 @@ function ContactInfo() {
       <Container className="contact-form" onSubmit={sendEmail}>
         <Row>
             <Column>
-                <label>Name <span>*</span></label>
+                <label>Name <Required>*</Required></label>
                 <Input
                     type="text"
                     name="from_name"
@@ -63,7 +68,7 @@ function ContactInfo() {
                 />
             </Column>
             <Column>
-                <label>Email <span>*</span></label>
+                <label>Email <Required>*</Required></label>
                 <Input
                     type="email"
                     name="from_email"
@@ -74,7 +79,7 @@ function ContactInfo() {
             </Column>
         </Row>
         <Row>
-            <label>Message <span>*</span></label>
+            <label>Message <Required>*</Required></label>
             <MessageInput
                 type="text"
                 name="message"
@@ -83,10 +88,32 @@ function ContactInfo() {
                 onChange={handleFormChange}
             />
         </Row>
-        <Input type="submit" value="Send" />
+        <Button type="submit">Send</Button>
         {/* <div class="g-recaptcha" data-sitekey="6LcOSF4jAAAAAHJx88mdVNetu4rHhViMOuVOt6nR"></div> */}
-        {error && <Row>{error}</Row>}
-        {confirmation && <Row>{confirmation}</Row>}
+        {error &&
+            <MsgContainer>
+                <AiFillExclamationCircle
+                    style={{
+                        color: 'red',
+                        fontSize: '20px',
+                        marginRight: '0.5vw'
+                    }}
+                />
+                {error}
+            </MsgContainer>
+        }
+        {confirmation &&
+            <MsgContainer>
+                <BsHandThumbsUp
+                    style={{
+                        color: '#00e64d',
+                        fontSize: '18px',
+                        marginRight: '0.5vw'
+                    }}
+                />
+                {confirmation}
+            </MsgContainer>
+        }
       </Container>
     );
   }
