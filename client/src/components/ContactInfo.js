@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
+import {
+    Container,
+    Input
+} from '../styles/ContactInfoStyles';
 
 function ContactInfo() {
 
@@ -43,36 +47,40 @@ function ContactInfo() {
     };
   
     return (
-      <form className="contact-form" onSubmit={sendEmail}>
-        <label>Name <span>*</span></label>
-        <input
-            type="text"
-            name="from_name"
-            value={formData.from_name}
-            onClick={handleMessages}
-            onChange={handleFormChange}
-        />
-        <label>Email <span>*</span></label>
-        <input
-            type="email"
-            name="from_email"
-            value={formData.from_email}
-            onClick={handleMessages}
-            onChange={handleFormChange}    
-        />
-        <label>Message <span>*</span></label>
-        <input
-            type="textarea"
-            name="message"
-            value={formData.message}
-            onClick={handleMessages}
-            onChange={handleFormChange}
-        />
-        <input type="submit" value="Send" />
+      <Container className="contact-form" onSubmit={sendEmail}>
+        <div>
+            <label>Name <span>*</span></label>
+            <Input
+                type="text"
+                name="from_name"
+                value={formData.from_name}
+                onClick={handleMessages}
+                onChange={handleFormChange}
+            />
+            <label>Email <span>*</span></label>
+            <Input
+                type="email"
+                name="from_email"
+                value={formData.from_email}
+                onClick={handleMessages}
+                onChange={handleFormChange}    
+            />
+        </div>
+        <div>
+            <label>Message <span>*</span></label>
+            <Input
+                type="text"
+                name="message"
+                value={formData.message}
+                onClick={handleMessages}
+                onChange={handleFormChange}
+            />
+        </div>
+        <Input type="submit" value="Send" />
         {/* <div class="g-recaptcha" data-sitekey="6LcOSF4jAAAAAHJx88mdVNetu4rHhViMOuVOt6nR"></div> */}
         {error && <div>{error}</div>}
         {confirmation && <div>{confirmation}</div>}
-      </form>
+      </Container>
     );
   }
 
