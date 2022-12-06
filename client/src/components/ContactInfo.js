@@ -1,29 +1,72 @@
+import { useState } from 'react';
 import emailjs from 'emailjs-com';
 
 function ContactInfo() {
 
+    const initialFormData = {
+        from_name: "",
+        from_email: "",
+        message: ""
+    };
+
+    const [formData, setFormData] = useState(initialFormData);
+    const [error, setError] = useState(null);
+    const [confirmation, setConfirmation] = useState(null);
+
+    const handleFormChange = (e) => {
+        const key = e.target.name
+        const value = e.target.value
+
+        setFormData({...formData, [key] : value})
+    };
+
+    const isValid = Boolean(formData.from_name !== "" && formData.from_email !== "" && formData.message !== "");
+
     function sendEmail(e) {
-      e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
-  
-      emailjs.sendForm('service_v3bpdl8', 'template_4nl0spn', e.target, 'EhI_xZcAYhshS9nyo')
-        .then((result) => {
-            window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
-        }, (error) => {
-            console.log(error.text);
-        });
-    }
+        e.preventDefault();
+
+        if (isValid) {
+            emailjs.sendForm('service_v3bpdl8', 'template_4nl0spn', e.target, 'EhI_xZcAYhshS9nyo')
+            .then(() => {
+                setFormData(initialFormData);
+                setConfirmation("Your message has been received!");
+            });
+        }
+        else {
+            setError("Please fill out the required fields");
+        };
+    };
   
     return (
       <form className="contact-form" onSubmit={sendEmail}>
-        <input type="hidden" name="contact_number" />
-        <label>Name</label>
-        <input type="text" name="from_name" />
-        <label>Email</label>
-        <input type="email" name="from_email" />
-        <label>Message</label>
-        <textarea name="html_message" />
+        <label>Name <span>*</span></label>
+        <input
+            type="text"
+            name="from_name"
+            value={formData.from_name}
+            onClick={() => setError(null)}
+            onChange={handleFormChange}
+        />
+        <label>Email <span>*</span></label>
+        <input
+            type="email"
+            name="from_email"
+            value={formData.from_email}
+            onClick={() => setError(null)}
+            onChange={handleFormChange}    
+        />
+        <label>Message <span>*</span></label>
+        <input
+            type="textarea"
+            name="message"
+            value={formData.message}
+            onClick={() => setError(null)}
+            onChange={handleFormChange}
+        />
         <input type="submit" value="Send" />
-        <div class="g-recaptcha" data-sitekey="6LcOSF4jAAAAAHJx88mdVNetu4rHhViMOuVOt6nR"></div>
+        {/* <div class="g-recaptcha" data-sitekey="6LcOSF4jAAAAAHJx88mdVNetu4rHhViMOuVOt6nR"></div> */}
+        {error && <div>{error}</div>}
+        {confirmation && <div>{confirmation}</div>}
       </form>
     );
   }
