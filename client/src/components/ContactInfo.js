@@ -36,6 +36,11 @@ function ContactInfo() {
             setError("Please fill out the required fields");
         };
     };
+
+    const handleMessages = () => {
+        setError(null);
+        setConfirmation(null);
+    };
   
     return (
       <form className="contact-form" onSubmit={sendEmail}>
@@ -44,7 +49,7 @@ function ContactInfo() {
             type="text"
             name="from_name"
             value={formData.from_name}
-            onClick={() => setError(null)}
+            onClick={handleMessages}
             onChange={handleFormChange}
         />
         <label>Email <span>*</span></label>
@@ -52,7 +57,7 @@ function ContactInfo() {
             type="email"
             name="from_email"
             value={formData.from_email}
-            onClick={() => setError(null)}
+            onClick={handleMessages}
             onChange={handleFormChange}    
         />
         <label>Message <span>*</span></label>
@@ -60,7 +65,7 @@ function ContactInfo() {
             type="textarea"
             name="message"
             value={formData.message}
-            onClick={() => setError(null)}
+            onClick={handleMessages}
             onChange={handleFormChange}
         />
         <input type="submit" value="Send" />
