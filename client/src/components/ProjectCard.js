@@ -15,7 +15,7 @@ import { DiRuby } from 'react-icons/di';
 import { FaRedhat } from 'react-icons/fa';
 import { FaCookieBite } from 'react-icons/fa';
 
-function ProjectCard({project}) {
+function ProjectCard({ project }) {
 
     const { isMobile } = useContext(IsMobileContext);
 
@@ -23,27 +23,37 @@ function ProjectCard({project}) {
         return <MobileProjectCard project={project} />
     }
 
-    const renderTechnologies = project && project.technologies.map(technology =>
-        {
-            if (technology.name === 'React.js') {
-                return <FaReact className="logo"/>
-            }
-            if (technology.name === 'Ruby on Rails') {
-                return <SiRubyonrails className="logo"/>
-            }
-            if (technology.name === 'Custom db.json') {
-                return <VscJson className="logo"/>
-            }
-            if (technology.name === 'Ruby') {
-                return <DiRuby className="logo"/>
-            }
-            if (technology.name === 'Sinatra') {
-                return <FaRedhat className="logo"/>
-            }
-            if (technology.name === 'User Authentication') {
-                return <FaCookieBite className="logo"/>
-            }
+    const findLogo  = (technology) => {
+        switch (technology.name) {
+            case 'React.js':
+                return <FaReact className="logo" />
+                break;
+            case 'Ruby on Rails':
+                return <SiRubyonrails className="logo" />
+                break;
+            case 'Custom db.json':
+                return <VscJson className="logo" />
+                break;
+            case 'Ruby':
+                return <DiRuby className="logo" />
+                break;
+            case 'Sinatra':
+                return <FaRedhat className="logo" />
+                break;
+            case 'User Authentication':
+                return <FaCookieBite className="logo" />
+                break;
+            case 'Styled Components':
+                return null
+                break;
+            default:
+                return <p>{technology.name}</p>
         }
+    }
+    
+
+    const renderTechnologies = project && project.technologies.map(technology =>
+        findLogo(technology)
     )
 
     return (
