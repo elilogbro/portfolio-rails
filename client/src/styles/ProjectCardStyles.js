@@ -6,6 +6,7 @@ export const Container = styled.div`
     margin: 1.5vw;
     margin-left: 0;
     margin-right: 0;
+    margin-left: 2vw;
 `;
 
 export const SubContainer = styled.div`
