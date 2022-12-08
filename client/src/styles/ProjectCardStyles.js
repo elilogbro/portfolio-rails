@@ -23,6 +23,14 @@ export const SubContainer2 = styled.div`
     text-align: left;
     display: flex;
     gap: 1vh;
-    width: 14vw;
+    width: fit-content;
     height: 41.9vh;
+`;
+
+export const LinkContainer = styled.div`
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    align-items: end;
+    width: 100%;
 `;

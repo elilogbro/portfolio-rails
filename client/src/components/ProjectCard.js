@@ -4,7 +4,8 @@ import IFrame from './IFrame';
 import {
     Container,
     SubContainer,
-    SubContainer2
+    SubContainer2,
+    LinkContainer
 } from '../styles/ProjectCardStyles';
 import { IsMobileContext } from '../context/IsMobileContext';
 import MobileProjectCard from '../mobile-components/MobileProjectCard';
@@ -61,13 +62,15 @@ function ProjectCard({ project }) {
             <IFrame project={project} />
             <SubContainer2>
                 {renderTechnologies}
+                <LinkContainer>
+                    <a href={project.github_url}>
+                        <AiFillGithub className="icon" />
+                    </a>
+                </LinkContainer>
             </SubContainer2>
             <SubContainer>
                 <h2>{project.name}</h2>
                 <p>{project.details}</p>
-                <a href={project.github_url}>
-                    <AiFillGithub className="icon" style={{width: '8vw', height: '7vh'}}/>
-                </a>
             </SubContainer>
         </Container>
     )

@@ -75,12 +75,11 @@
 }
 
 .icon {
-    width: 3.5vw;
     color:  #00C542;
-    height: 4vh;
-    padding: 0vw;
-    margin-top: 0.2vw;
-    margin-bottom: 0;
+    height: 6vh;
+    width: fit-content;
+    margin: 1.3vh;
+    flex-basis: content;
 }
 
 .icon:hover {
@@ -125,7 +124,7 @@
 }
 
 .logo {
-    height: 4vh;
+    height: 7vh;
     width: fit-content;
     margin: 1.3vh;
     flex-basis: content;
