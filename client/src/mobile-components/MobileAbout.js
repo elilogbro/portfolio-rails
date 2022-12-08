@@ -1,21 +1,11 @@
-import { useContext } from 'react';
 import {
     Image,
     Container,
     Header,
     SubContainer
-} from '../styles/AboutStyles';
-import { IsMobileContext } from '../context/IsMobileContext';
-import MobileAbout from '../mobile-components/MobileAbout';
+} from '../mobile-styles/MobileAboutStyles';
 
-function About() {
-
-    const { isMobile } = useContext(IsMobileContext);
-
-    if (isMobile) {
-        return <MobileAbout />
-    }
-    
+function MobileAbout() {
     return (
         <Container>
             <Header>
@@ -34,4 +24,4 @@ function About() {
     )
 }
 
-export default About;
+export default MobileAbout;
