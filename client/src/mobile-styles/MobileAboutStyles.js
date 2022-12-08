@@ -10,12 +10,13 @@ export const Container = styled.div`
 `;
 
 export const Image = styled.img`
-    width: 100vw;
+    width: 90vw;
     height: auto;
 `;
 
 export const Header = styled.div`
     text-align: center;
+    font-size: x-large;
 `;
 
 export const SubContainer = styled.div`
@@ -25,4 +26,10 @@ export const SubContainer = styled.div`
     margin-bottom: 12vh;
     font-size: x-large;
     width: 100vw;
+    align-items: center;
+`;
+
+export const Details = styled.div`
+    padding-left: 4vw;
+    padding-right: 4vw;
 `;
