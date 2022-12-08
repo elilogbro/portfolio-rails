@@ -20,7 +20,8 @@ export const SubContainer2 = styled.div`
     display: flex;
     width: fit-content:
     height: auto;
-    margin-bottom: 4vh;
+    padding-bottom: 4vh;
+    padding-top: 2vh;
 `;
 
 

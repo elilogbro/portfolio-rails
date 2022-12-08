@@ -1,37 +1,28 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import {
     Container,
     Input,
     Row,
-    Column,
     MessageInput,
     Button,
     Required,
     MsgContainer
-} from '../styles/ContactInfoStyles';
+} from '../mobile-styles/MobileContactInfoStyles';
 import { AiFillExclamationCircle } from 'react-icons/ai';
 import { BsHandThumbsUp } from 'react-icons/bs';
-import { IsMobileContext } from '../context/IsMobileContext';
-import MobileContactInfo from '../mobile-components/MobileContactInfo';
 
-function ContactInfo() {
+function MobileContactInfo() {
 
-    const { isMobile } = useContext(IsMobileContext);
-    
     const initialFormData = {
         from_name: "",
         from_email: "",
         message: ""
     };
-    
+
     const [formData, setFormData] = useState(initialFormData);
     const [error, setError] = useState(null);
     const [confirmation, setConfirmation] = useState(null);
-    
-    if (isMobile) {
-        return <MobileContactInfo />
-    }
 
     const handleFormChange = (e) => {
         const key = e.target.name
@@ -65,28 +56,22 @@ function ContactInfo() {
     return (
       <Container className="contact-form" onSubmit={sendEmail}>
         <Row>
-            <Column>
-                <label>Name <Required>*</Required></label>
-                <Input
-                    type="text"
-                    name="from_name"
-                    value={formData.from_name}
-                    onClick={handleMessages}
-                    onChange={handleFormChange}
-                />
-            </Column>
-            <Column>
-                <label>Email <Required>*</Required></label>
-                <Input
-                    type="email"
-                    name="from_email"
-                    value={formData.from_email}
-                    onClick={handleMessages}
-                    onChange={handleFormChange}    
-                />
-            </Column>
-        </Row>
-        <Row>
+            <label>Name <Required>*</Required></label>
+            <Input
+                type="text"
+                name="from_name"
+                value={formData.from_name}
+                onClick={handleMessages}
+                onChange={handleFormChange}
+            />
+            <label>Email <Required>*</Required></label>
+            <Input
+                type="email"
+                name="from_email"
+                value={formData.from_email}
+                onClick={handleMessages}
+                onChange={handleFormChange}    
+            />
             <label>Message <Required>*</Required></label>
             <MessageInput
                 type="text"
@@ -126,4 +111,4 @@ function ContactInfo() {
     )
   }
 
-  export default ContactInfo;
+export default MobileContactInfo;
