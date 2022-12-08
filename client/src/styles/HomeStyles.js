@@ -13,7 +13,7 @@ export const LinksContainer = styled.div`
 `;
 
 export const Column = styled.div`
-
+    align-items: center;
 `
 
 export const Button = styled.button`
