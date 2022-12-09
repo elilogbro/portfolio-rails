@@ -1,9 +1,6 @@
 import React, { useState, useContext } from 'react';
 import Image from 'react-bootstrap/Image';
 import Col from 'react-bootstrap/Col';
-import { AiFillGithub } from 'react-icons/ai';
-import { AiFillLinkedin } from 'react-icons/ai';
-import { AiFillMediumCircle } from 'react-icons/ai';
 import { HiViewList } from 'react-icons/hi';
 import Dropdown from './Dropdown';
 import {
@@ -40,26 +37,13 @@ function Home() {
                 />
                 <Col className="details-container">
                     <h4><strong>Hi there! I'm</strong></h4>
-                    <h2><strong><span style={{color: "#6819fc"}}>Eliott</span></strong> Brown</h2>
+                    <h2 style={{marginLeft: '4vw'}}><strong><span style={{color: "#6819fc"}}>Eliott</span></strong> Brown</h2>
                     <p style={{color: '#919497'}}>A <strong><span style={{color: "#6819fc"}}>Full-Stack Software Engineer</span></strong> passionate about creating unique software solutions</p>
                     <LinksContainer>
-                        <Column>
-                            <Button onClick={handleButtonClick}>
-                                Resume <HiViewList />
-                            </Button>
-                            {clicked && <Dropdown mobile="false"/>}
-                        </Column>
-                        <Column>
-                            <a href="https://github.com/elilogbro">
-                                <AiFillGithub className="icon" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/eli-in-tech/">
-                                <AiFillLinkedin className="icon" />
-                            </a>
-                            <a href="https://medium.com/@elilogbro">
-                                <AiFillMediumCircle className="icon" />
-                            </a>
-                        </Column>
+                        <Button onClick={handleButtonClick}>
+                            Resume <HiViewList />
+                        </Button>
+                        {clicked && <Dropdown mobile="false"/>}
                     </LinksContainer>
                 </Col>
             </Col>

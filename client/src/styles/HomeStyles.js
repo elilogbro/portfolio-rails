@@ -8,10 +8,10 @@ export const Container = styled.div`
 
 export const LinksContainer = styled.div`
     display: flex;
-    justify-content: left;
+    flex-direction: column;
     width: 100%;
-    margin-right: 0;
-    align-items: baseline;
+    align-items: center;
+    padding-right: 8vw;
     min-height: 20vh;
     font-family: 'Poppins', sans-serif;
 `;
