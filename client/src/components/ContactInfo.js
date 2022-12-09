@@ -8,7 +8,9 @@ import {
     MessageInput,
     Button,
     Required,
-    MsgContainer
+    MsgContainer,
+    Right,
+    Left
 } from '../styles/ContactInfoStyles';
 import { AiFillExclamationCircle } from 'react-icons/ai';
 import { BsHandThumbsUp } from 'react-icons/bs';
@@ -63,66 +65,77 @@ function ContactInfo() {
     };
   
     return (
-      <Container className="contact-form" onSubmit={sendEmail}>
-        <Row>
-            <Column>
-                <label>Name <Required>*</Required></label>
-                <Input
-                    type="text"
-                    name="from_name"
-                    value={formData.from_name}
-                    onClick={handleMessages}
-                    onChange={handleFormChange}
-                />
-            </Column>
-            <Column>
-                <label>Email <Required>*</Required></label>
-                <Input
-                    type="email"
-                    name="from_email"
-                    value={formData.from_email}
-                    onClick={handleMessages}
-                    onChange={handleFormChange}    
-                />
-            </Column>
-        </Row>
-        <Row>
-            <label>Message <Required>*</Required></label>
-            <MessageInput
-                type="text"
-                name="message"
-                value={formData.message}
-                onClick={handleMessages}
-                onChange={handleFormChange}
-            />
-        </Row>
-        <Button type="submit">Send</Button>
-        {/* <div class="g-recaptcha" data-sitekey="6LcOSF4jAAAAAHJx88mdVNetu4rHhViMOuVOt6nR"></div> */}
-        {error &&
-            <MsgContainer>
-                <AiFillExclamationCircle
-                    style={{
-                        color: 'red',
-                        fontSize: '20px',
-                        marginRight: '0.5vw'
-                    }}
-                />
-                {error}
-            </MsgContainer>
-        }
-        {confirmation &&
-            <MsgContainer>
-                <BsHandThumbsUp
-                    style={{
-                        color: '#00e64d',
-                        fontSize: '18px',
-                        marginRight: '0.5vw'
-                    }}
-                />
-                {confirmation}
-            </MsgContainer>
-        }
-      </Container>
+        <Container>
+            <Left>
+                <h2>Contact</h2>
+                <h1>Looking for a new developer or just want to chat?</h1>
+                <p>Send me a message to get the process started.</p>
+                <p>elilogbro@gmail.com</p>
+            </Left>
+            <Right onSubmit={sendEmail}>
+                <Row>
+                    <Column>
+                        <label>Name <Required>*</Required></label>
+                        <Input
+                            type="text"
+                            name="from_name"
+                            value={formData.from_name}
+                            onClick={handleMessages}
+                            onChange={handleFormChange}
+                        />
+                    </Column>
+                </Row>
+                <Row>
+                    <Column>
+                        <label>Email <Required>*</Required></label>
+                        <Input
+                            type="email"
+                            name="from_email"
+                            value={formData.from_email}
+                            onClick={handleMessages}
+                            onChange={handleFormChange}    
+                        />
+                    </Column>
+                </Row>
+                <Row>
+                    <Column>
+                        <label>Message <Required>*</Required></label>
+                        <MessageInput
+                            type="text"
+                            name="message"
+                            value={formData.message}
+                            onClick={handleMessages}
+                            onChange={handleFormChange}
+                        />
+                    </Column>
+                </Row>
+                <Button type="submit">Send</Button>
+                {error &&
+                    <MsgContainer>
+                        <AiFillExclamationCircle
+                            style={{
+                                color: 'red',
+                                fontSize: '20px',
+                                marginRight: '0.5vw'
+                            }}
+                        />
+                        {error}
+                    </MsgContainer>
+                }
+                {confirmation &&
+                    <MsgContainer>
+                        <BsHandThumbsUp
+                            style={{
+                                color: '#00e64d',
+                                fontSize: '18px',
+                                marginRight: '0.5vw'
+                            }}
+                        />
+                        {confirmation}
+                    </MsgContainer>
+                }
+            </Right>
+        </Container>
     )
   }
 

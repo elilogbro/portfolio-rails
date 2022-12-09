@@ -1,12 +1,29 @@
 import styled from 'styled-components';
 
-export const Container = styled.form`
+export const Right = styled.form`
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: fit-content;
+    justify-content: center;
+    text-transform: uppercase;
+    gap: 2vh;
+    align-self: center;
+`;
+
+export const Container = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 8vw;
+    height: 100vh;
+`;
+
+export const Left = styled.div`
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: fit-content;
-    padding-left: 18vw;
-    text-align: center;
+    text-align: left;
     justify-content: center;
 `;
 
@@ -16,7 +33,7 @@ export const Input = styled.input`
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-    width: 16vw;
+    width: 36vw;
     background-color: #1f2731;
     background-clip: padding-box;
     border: 1px solid #ced4da;
@@ -33,7 +50,7 @@ export const Input = styled.input`
 `;
 
 export const MessageInput = styled.textarea`
-    width: 40vw;
+    width: 36vw;
     height: 16vh;
     padding: 6px 12px;
     font-size: 16px;
@@ -60,13 +77,14 @@ export const Row = styled.div`
     flex-direction: row;
     width: fit-content;
     justify-content: flex-start;
-    gap: 2vw;
     margin: 2vh;
 `;
 
 export const Column = styled.div`
     display: flex;
-    gap: 2vw;
+    flex-direction: column;
+    text-align: left;
+    gap: 1vh;
 `;
 
 export const Button = styled.button`
@@ -74,7 +92,7 @@ export const Button = styled.button`
     outline: none;
     cursor: pointer;
     width: fit-content;
-    padding: 16px 14px 18px;
+    padding: 14px 18px;
     line-height: 1;
     border-radius: 500px;
     transition-property: background-color,border-color,color,box-shadow,filter;
@@ -108,4 +126,5 @@ export const MsgContainer = styled.div`
     align-self: center;
     margin-top: 2vh;
     align-items: center;
+    justify-content: center;
 `;
