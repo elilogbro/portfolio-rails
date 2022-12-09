@@ -33,8 +33,8 @@ function Navigation() {
     return (
         <Navbar>
             <BrandContainer>
-                <NavLink to="/" className="nav-link">
-                    Eliott Brown
+                <NavLink to="/" className="brand-link">
+                    <strong>Eliott</strong> Brown
                 </NavLink>
             </BrandContainer>
             <NavContainer>

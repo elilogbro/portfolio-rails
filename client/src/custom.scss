@@ -2,8 +2,17 @@
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
 
-.nav-link {
+.nav-link, .brand-link {
     text-decoration: none;
+    color: white;
+}
+
+.brand-link {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.brand-link:hover {
+    color: white;
 }
 
 .nav-link:hover {
@@ -19,6 +28,7 @@
     padding-bottom: 2em;
     margin: 0;
     text-align: center;
+    font-size: large;
 }
 
 .app-container {

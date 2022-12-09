@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const BrandContainer = styled.div`
     display: flex;
     padding-left: 8vw;
+    font-size: medium;
 `;
 
 export const NavContainer = styled.div`
