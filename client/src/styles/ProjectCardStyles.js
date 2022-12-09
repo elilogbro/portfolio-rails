@@ -20,11 +20,11 @@ export const SubContainer = styled.div`
 
 export const SubContainer2 = styled.div`
     flex-direction: column;
-    text-align: left;
     display: flex;
     gap: 1vh;
     width: fit-content;
     height: 41.9vh;
+    align-items: center;
 `;
 
 export const LinkContainer = styled.div`
@@ -33,4 +33,9 @@ export const LinkContainer = styled.div`
     flex-direction: row;
     align-items: end;
     width: 100%;
+`;
+
+export const IconContainer = styled.div`
+    display: flex;
+    flex-direction: column;
 `;

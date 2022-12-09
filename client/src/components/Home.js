@@ -39,8 +39,8 @@ function Home() {
                     className="image"
                 />
                 <Col className="details-container">
-                    <h4>Hi there! I'm</h4>
-                    <h2><span style={{color: "#00C542"}}>Eliott</span> Brown</h2>
+                    <h4><strong>Hi there! I'm</strong></h4>
+                    <h2><strong><span style={{color: "#6819fc"}}>Eliott</span></strong> Brown</h2>
                     <p>A <strong><span style={{color: "#00C542"}}>Full-Stack Software Engineer</span></strong> passionate about creating unique software solutions</p>
                     <LinksContainer>
                         <Column>

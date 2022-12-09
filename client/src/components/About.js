@@ -19,8 +19,8 @@ function About() {
     return (
         <Container>
             <Header>
-                <h4>Who is Eliott Brown?</h4>
-                <p>A curious Full Stack Software Engineer who is passionate about the Frontend and is constantly trying to further himself.</p>
+                <h4 style={{fontFamily: 'Montserrat, sans-serif'}}><strong>Who is Eliott Brown?</strong></h4>
+                <p style={{fontFamily: 'Poppins, sans-serif'}}>A curious Full Stack Software Engineer who is passionate about the Frontend and is constantly trying to further himself.</p>
             </Header>
             <SubContainer>
                 <Image src={'/mewithhenry.jpg'} alt="hiking with my dog, Henry" />

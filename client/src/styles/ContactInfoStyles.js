@@ -5,7 +5,7 @@ export const Container = styled.form`
     flex-direction: column;
     height: 100vh;
     width: fit-content;
-    padding-left: 10vw;
+    padding-left: 18vw;
     text-align: center;
     justify-content: center;
 `;
@@ -17,7 +17,7 @@ export const Input = styled.input`
     line-height: 1.5;
     color: #212529;
     width: 16vw;
-    background-color: #fff;
+    background-color: #1f2731;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     appearance: none;
@@ -25,10 +25,10 @@ export const Input = styled.input`
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     :focus{
         color: #212529;
-        background-color: #fff;
-        border-color: #00C542;
+        background-color: #1f2731;
+        border-color: #6819fc;
         outline: 0;
-        box-shadow: 0 0 0 0.25rem rgb(0 197 66 / 25%);
+        box-shadow: 0 0 0 0.25rem rgb(104 25 252 / 25%);
     }
 `;
 
@@ -40,7 +40,7 @@ export const MessageInput = styled.textarea`
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-    background-color: #fff;
+    background-color: #1f2731;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     appearance: none;
@@ -48,10 +48,10 @@ export const MessageInput = styled.textarea`
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     :focus{
         color: #212529;
-        background-color: #fff;
-        border-color: #00C542;
+        background-color: #1f2731;
+        border-color: #6819fc;
         outline: 0;
-        box-shadow: 0 0 0 0.25rem rgb(0 197 66 / 25%);
+        box-shadow: 0 0 0 0.25rem rgb(104 25 252 / 25%);
     }
 `
 

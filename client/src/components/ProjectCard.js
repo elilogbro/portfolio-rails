@@ -5,7 +5,8 @@ import {
     Container,
     SubContainer,
     SubContainer2,
-    LinkContainer
+    LinkContainer,
+    IconContainer
 } from '../styles/ProjectCardStyles';
 import { IsMobileContext } from '../context/IsMobileContext';
 import MobileProjectCard from '../mobile-components/MobileProjectCard';
@@ -61,7 +62,9 @@ function ProjectCard({ project }) {
         <Container>
             <IFrame project={project} />
             <SubContainer2>
-                {renderTechnologies}
+                <IconContainer>
+                    {renderTechnologies}
+                </IconContainer>
                 <LinkContainer>
                     <a href={project.github_url}>
                         <AiFillGithub className="icon" />
@@ -69,8 +72,8 @@ function ProjectCard({ project }) {
                 </LinkContainer>
             </SubContainer2>
             <SubContainer>
-                <h2>{project.name}</h2>
-                <p>{project.details}</p>
+                <h2 style={{fontFamily: 'Montserrat, sans-serif'}}>{project.name}</h2>
+                <p style={{fontFamily: 'Poppins, sans-serif'}}>{project.details}</p>
             </SubContainer>
         </Container>
     )

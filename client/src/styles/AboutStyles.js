@@ -10,14 +10,19 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10vh;
+    padding-left: 2vw;
+    padding-bottom: 10vh;
 `;
 
 export const Header = styled.div`
     text-align: center;
+    font-size: large;
 `;
 
 export const SubContainer = styled.div`
     display: flex;
     flex-direction: row;
-    gap: 4vw;
+    gap: 2vw;
+    font-family: Poppins, sans-serif;
+    font-size: large;
 `;

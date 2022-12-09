@@ -11,11 +11,12 @@ export const LinksContainer = styled.div`
     justify-content: left;
     width: 100%;
     margin-right: 0;
-    align-items: center;
+    align-items: baseline;
+    min-height: 20vh;
+    font-family: 'Poppins', sans-serif;
 `;
 
 export const Column = styled.div`
-    align-items: center;
 `;
 
 export const Button = styled.button`

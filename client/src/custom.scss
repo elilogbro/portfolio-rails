@@ -3,7 +3,7 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
 .navbar-custom {
-    background-color: #00C542;
+    background-color: #919497;
     height: 38vh;
     width: 5vw; 
     display: flex;
@@ -37,8 +37,9 @@
     height: 100vh;
     width: 100vw;
     margin: 0;
-    background-color: #f7f7f7;
+    background-color: #0f1922;
     overflow: auto;
+    color: white;
 }
 
 .mobile-routes-container {
@@ -74,10 +75,11 @@
 .details-container {
     margin-top: 9vh;
     text-align: left;
+    font-family: 'Poppins', sans-serif;
 }
 
 .icon {
-    color:  #00C542;
+    color:  #6819fc;
     height: 6vh;
     width: fit-content;
     margin: 1.3vh;
@@ -118,14 +120,14 @@
 }
 
 .nav {
-    color: white;
+    color: black;
     height: 4vh;
     width: 4vw;
     margin: 1.3vh;
 }
 
 .logo {
-    height: 7vh;
+    height: 5vh;
     width: fit-content;
     margin: 1.3vh;
     flex-basis: content;
