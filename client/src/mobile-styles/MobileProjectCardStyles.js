@@ -6,6 +6,7 @@ export const Container = styled.div`
     align-items: center;
     text-align: center;
     gap: 0vh;
+    width: 100%;
 `;
 
 export const SubContainer = styled.div`
@@ -13,6 +14,7 @@ export const SubContainer = styled.div`
     flex-direction: column;
     font-size: large;
     gap: 2vh;
+    font-size: x-large;
 `;
 
 export const SubContainer2 = styled.div`

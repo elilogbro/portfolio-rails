@@ -32,7 +32,7 @@ function Dropdown({mobile}) {
                         {mobile ?
                             <object data={'/resume.pdf'} type="application/pdf" width="100%" height="100%">
                                 <TextContainer>
-                                    <p style={{width: '56vw', fontSize: 'large'}}>Unable to load on your mobile device, use <a href="https://www.linkedin.com/in/eli-in-tech/overlay/1635508967519/single-media-viewer/">this link!</a></p>
+                                    <p style={{width: 'fit-content', fontSize: 'large'}}>Unable to load on your mobile device, use <a href="https://www.linkedin.com/in/eli-in-tech/overlay/1635508967519/single-media-viewer/">this link!</a></p>
                                 </TextContainer>
                             </object> :
                             <div></div>

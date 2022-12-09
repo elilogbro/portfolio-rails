@@ -10,7 +10,7 @@ function MobileAbout() {
     return (
         <Container>
             <Header>
-                <h3>Who is Eliott Brown?</h3>
+                <h1>Who is Eliott Brown?</h1>
                 <p>A curious Full Stack Software Engineer who is passionate about the Frontend and is constantly trying to further himself.</p>
             </Header>
             <SubContainer>

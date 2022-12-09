@@ -6,15 +6,18 @@ export const Container = styled.div`
     flex-direction: column;
     gap: 10vh;
     align-items: center;
-    width: 100vw;
+    width: 100%;
 `;
 
 export const Image = styled.img`
-    width: 90vw;
+    width: 100%;
     height: auto;
 `;
 
 export const Header = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
     text-align: center;
     font-size: x-large;
 `;
@@ -30,6 +33,8 @@ export const SubContainer = styled.div`
 `;
 
 export const Details = styled.div`
-    padding-left: 4vw;
-    padding-right: 4vw;
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    gap: 3vh;
 `;

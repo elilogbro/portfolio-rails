@@ -35,23 +35,23 @@ function MobileHome() {
                     <h2><span style={{color: "#00C542"}}>Eliott</span> Brown</h2>
                     <p>A <strong><span style={{color: "#00C542"}}>Full-Stack Software Engineer</span></strong> passionate about creating unique software solutions</p>
                     <LinksContainer>
-                    <Column>
-                        <Button onClick={handleButtonClick} mobile="true">
-                            Resume <HiViewList />
-                        </Button>
-                        {clicked && <Dropdown mobile="true"/>}
-                    </Column>
-                    <Column>
-                        <a href="https://github.com/elilogbro">
-                            <AiFillGithub className="mobile-icon" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/eli-in-tech/">
-                            <AiFillLinkedin className="mobile-icon" />
-                        </a>
-                        <a href="https://medium.com/@elilogbro">
-                            <AiFillMediumCircle className="mobile-icon" />
-                        </a>
-                    </Column>
+                        <Column>
+                            <Button onClick={handleButtonClick} mobile="true">
+                                Resume <HiViewList />
+                            </Button>
+                            {clicked && <Dropdown mobile="true"/>}
+                        </Column>
+                        <Column>
+                            <a href="https://github.com/elilogbro">
+                                <AiFillGithub className="mobile-icon" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/eli-in-tech/">
+                                <AiFillLinkedin className="mobile-icon" />
+                            </a>
+                            <a href="https://medium.com/@elilogbro">
+                                <AiFillMediumCircle className="mobile-icon" />
+                            </a>
+                        </Column>
                     </LinksContainer>
                 </Row>
             </Row>

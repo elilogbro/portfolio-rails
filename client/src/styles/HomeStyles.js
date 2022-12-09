@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
+    align-items: center;
+    width: 100%;
 `;
 
 export const LinksContainer = styled.div`
@@ -9,12 +11,12 @@ export const LinksContainer = styled.div`
     justify-content: left;
     width: 100%;
     margin-right: 0;
-    align-items: flex-start;
+    align-items: center;
 `;
 
 export const Column = styled.div`
     align-items: center;
-`
+`;
 
 export const Button = styled.button`
     outline: none;
@@ -22,17 +24,18 @@ export const Button = styled.button`
     font-weight: 500;
     border: 1px solid transparent;
     border-radius: 1.5em;
-    height: ${props => props.mobile ? "5vh" : "fit-content"};
-    width: ${props => props.mobile && "30vw"};
-    font-size: ${props => props.mobile ? "1em" : "1em"};
+    height: fit-content;
+    width: ${props => props.mobile && "fit-content"};
+    font-size: ${props => props.mobile ? "1.25em" : "1em"};
     color: #ffffff;
     background-color: #00C542;
     transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
-    padding: ${props => props.mobile ? "1vw 1.5vw" : "0.5vw 1.5vw"};
+    padding: ${props => props.mobile ? "1vw 2vw" : "0.5vw 1.5vw"};
     :hover {
         color: #ffffff;
         background-color: #00e64d;
     }
-    margin-right: ${props => props.modal ? "0.5em" : "3vw"};
-    margin-top: ${props => props.modal ? "0.2em" : "0.5vh"};
+    margin-right: ${props => props.modal && "0.5em"};
+    margin-top: ${props => props.modal && "0.2em"};
+    margin: ${props => props.mobile && '0.6vh'};
 `;

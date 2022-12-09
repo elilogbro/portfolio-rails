@@ -15,6 +15,8 @@
     justify-content: center;
     border-radius: 2em;
     vertical-align: middle;
+    left: 0;
+    z-index: 1;
 }
 
 .brand-container {
@@ -31,6 +33,7 @@
 .app-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -39,7 +42,6 @@
 }
 
 .mobile-routes-container {
-    // flex-direction: column;
     height: 100vh;
     width: 100vw;
     padding: 0;
@@ -54,12 +56,10 @@
 }
 
 .routes-container {
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    margin: 0;
+    height: 100vh;
+    width: 100vw;
     padding: 0;
-    margin-left: 8vw;
+    margin: 0;
 }
 
 .image {
@@ -90,14 +90,13 @@
 }
 
 .mobile-icon {
-    width: 10vw;
+    width: 12vw;
     color:  #00C542;
-    height: 6vh;
+    height: auto;
     padding: 0.4vw;
     margin: 1vw;
     margin-top: 0.2vw;
     margin-bottom: 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .navbar-mobile {
@@ -107,7 +106,7 @@
     display: flex;
     flex-direction: row;
     margin: 0;
-    margin-left: 16vw;
+    // margin-left: 16vw;
     padding: 0;
     z-index: 1;
     bottom: 0;

@@ -3,10 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.form`
     display: flex;
     flex-direction: column;
-    height: 50vh;
+    height: 100vh;
     width: fit-content;
-    margin-top: 24vh;
-    margin-left: 16vw;
+    padding-left: 10vw;
     text-align: center;
     justify-content: center;
 `;
@@ -59,6 +58,8 @@ export const MessageInput = styled.textarea`
 export const Row = styled.div`
     display: flex;
     flex-direction: row;
+    width: fit-content;
+    justify-content: flex-start;
     gap: 2vw;
     margin: 2vh;
 `;
@@ -75,7 +76,7 @@ export const Button = styled.button`
     border: 1px solid transparent;
     border-radius: 1.5em;
     height: ${props => props.mobile ? "5vh" : "fit-content"};
-    width: ${props => props.mobile ? "30vw" : "12vw"};
+    width: ${props => props.mobile ? "30vw" : "8vw"};
     align-self: center;
     font-size: ${props => props.mobile ? "1em" : "1em"};
     color: #ffffff;

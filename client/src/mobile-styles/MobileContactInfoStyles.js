@@ -4,10 +4,10 @@ export const Container = styled.form`
     display: flex;
     flex-direction: column;
     padding-top: 10vh;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     align-items: center;
-    gap: 4vh;
+    gap: 2vh;
     font-size: x-large;
 `;
 
@@ -17,7 +17,7 @@ export const Input = styled.input`
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-    width: 70vw;
+    width: 100%;
     height: 6vh;
     background-color: #fff;
     background-clip: padding-box;
@@ -38,10 +38,11 @@ export const Row = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    width: 90vw;
 `;
 
 export const MessageInput = styled.textarea`
-    width: 70vw;
+    width: 100%;
     height: 26vh;
     padding: 6px 12px;
     font-size: x-large;
@@ -70,13 +71,13 @@ export const Button = styled.button`
     border: 1px solid transparent;
     border-radius: 1.5em;
     height: fit-content;
-    width: 18vw;
+    width: fit-content;
+    min-width: 20vw;
     align-self: center;
-    font-size: 1em;
     color: #ffffff;
     background-color: #00C542;
     transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
-    padding: 1vw 1.5vw;
+    padding: 1vw 2vw;
     :hover {
         color: #ffffff;
         background-color: #00e64d;
@@ -89,5 +90,7 @@ export const Required = styled.span`
 `;
 
 export const MsgContainer = styled.div`
-
+    display: flex;
+    align-items: center;
+    padding
 `;

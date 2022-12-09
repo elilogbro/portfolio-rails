@@ -25,9 +25,8 @@ export const ListItem = styled.li`
 
 export const ModalContainer = styled.div`
     display: flex;
-    width: 66vw;
+    width: 70vw;
     height: 90vh;
-    // margin-left: 0;
 `;
 
 export const Row = styled.div`
@@ -38,5 +37,4 @@ export const TextContainer = styled.div`
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     background-color: white;
     padding: 1em;
-    width: fit-content;
 `;

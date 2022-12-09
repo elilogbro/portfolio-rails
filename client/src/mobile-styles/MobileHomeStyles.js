@@ -11,6 +11,7 @@ export const LinksContainer = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
+    min-height: 20vh;
 `;
 
 export const Row = styled.div`
@@ -18,7 +19,7 @@ export const Row = styled.div`
 `
 
 export const Column = styled.div`
-    justify-content: center;
+    align-self: auto;
 `
 
 export const Image = styled.img`

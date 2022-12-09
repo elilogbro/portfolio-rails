@@ -43,12 +43,12 @@ function Home() {
                     <h2><span style={{color: "#00C542"}}>Eliott</span> Brown</h2>
                     <p>A <strong><span style={{color: "#00C542"}}>Full-Stack Software Engineer</span></strong> passionate about creating unique software solutions</p>
                     <LinksContainer>
-                    <Column>
-                        <Button onClick={handleButtonClick}>
-                            Resume <HiViewList />
-                        </Button>
-                        {clicked && <Dropdown mobile="false"/>}
-                    </Column>
+                        <Column>
+                            <Button onClick={handleButtonClick}>
+                                Resume <HiViewList />
+                            </Button>
+                            {clicked && <Dropdown mobile="false"/>}
+                        </Column>
                         <Column>
                             <a href="https://github.com/elilogbro">
                                 <AiFillGithub className="icon" />
