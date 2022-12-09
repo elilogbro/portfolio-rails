@@ -8,6 +8,7 @@ import {
 } from '../styles/DropdownStyles';
 import { Button } from '../styles/HomeStyles';
 import Popup from 'reactjs-popup';
+import { ImArrowRight } from 'react-icons/im';
 
 function Dropdown({mobile}) {
 
@@ -16,7 +17,7 @@ function Dropdown({mobile}) {
     return (
         <Container>
             <List>
-                <ListItem onClick={() => setOpen(true)}>View</ListItem>
+                <ListItem onClick={() => setOpen(true)}><ImArrowRight style={{marginRight: '1vw'}}/>View</ListItem>
                 <Popup
                     open={open}
                     // modal
@@ -49,7 +50,7 @@ function Dropdown({mobile}) {
                         color: 'black'
                     }}
                 >
-                    <ListItem>Download</ListItem>
+                    <ListItem><ImArrowRight style={{marginRight: '1vw'}}/>Download</ListItem>
                 </a>
             </List>
         </Container>

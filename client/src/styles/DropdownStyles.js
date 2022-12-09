@@ -17,9 +17,11 @@ export const List = styled.ul`
 `;
 export const ListItem = styled.li`
     padding: 4px 4px;
+    background-color: transparent;
+    color: white;
     &:hover{
-        background-color: #ececec;
         cursor: pointer;
+        color: #6819fc;
     }
 `;
 
