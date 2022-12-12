@@ -8,12 +8,10 @@ import {
     MessageInput,
     Button,
     Required,
-    MsgContainer,
     Right,
-    Left
+    Left,
+    Error
 } from '../styles/ContactInfoStyles';
-import { AiFillExclamationCircle } from 'react-icons/ai';
-import { BsHandThumbsUp } from 'react-icons/bs';
 import { IsMobileContext } from '../context/IsMobileContext';
 import MobileContactInfo from '../mobile-components/MobileContactInfo';
 
@@ -91,8 +89,9 @@ function ContactInfo() {
                             value={formData.from_name}
                             onChange={handleFormChange}
                             onClick={handleErrors}
+                            error={errorLocation.from_name && "true"}
                         />
-                        <p>{errorLocation.from_name && "Name is empty."}</p>
+                        <Error>{errorLocation.from_name && "Name is empty."}</Error>
                     </Column>
                 </Row>
                 <Row>
@@ -104,8 +103,9 @@ function ContactInfo() {
                             value={formData.from_email}
                             onChange={handleFormChange}
                             onClick={handleErrors}
+                            error={errorLocation.from_email && "true"}
                         />
-                        <p>{errorLocation.from_email && "Email is empty."}</p>
+                        <Error>{errorLocation.from_email && "Email is empty."}</Error>
                     </Column>
                 </Row>
                 <Row>
@@ -117,8 +117,9 @@ function ContactInfo() {
                             value={formData.message}
                             onChange={handleFormChange}
                             onClick={handleErrors}
+                            error={errorLocation.message && "true"}
                         />
-                        <p>{errorLocation.message && "Message is empty."}</p>
+                        <Error>{errorLocation.message && "Message is empty."}</Error>
                     </Column>
                 </Row>
                 <Button type="submit">Send</Button>

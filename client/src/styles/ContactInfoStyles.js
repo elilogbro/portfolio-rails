@@ -6,9 +6,8 @@ export const Right = styled.form`
     height: 100%;
     width: fit-content;
     justify-content: center;
-    text-transform: uppercase;
-    gap: 2vh;
     align-self: center;
+    text-transform: uppercase;
 `;
 
 export const Container = styled.div`
@@ -37,7 +36,7 @@ export const Input = styled.input`
     color: white;
     background-color: #1f2731;
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+    border: ${props => props.error ? "1px solid red" : "1px solid #ced4da"};
     appearance: none;
     border-radius: 4px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -46,7 +45,6 @@ export const Input = styled.input`
         background-color: #1f2731;
         border-color: #6819fc;
         outline: 0;
-        box-shadow: 0 0 0 0.25rem rgb(104 25 252 / 25%);
     }
 `;
 
@@ -60,7 +58,7 @@ export const MessageInput = styled.textarea`
     color: white;
     background-color: #1f2731;
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+    border: ${props => props.error ? "1px solid red" : "1px solid #ced4da"};
     appearance: none;
     border-radius: 4px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -69,7 +67,6 @@ export const MessageInput = styled.textarea`
         background-color: #1f2731;
         border-color: #6819fc;
         outline: 0;
-        box-shadow: 0 0 0 0.25rem rgb(104 25 252 / 25%);
     }
 `
 
@@ -85,7 +82,6 @@ export const Column = styled.div`
     display: flex;
     flex-direction: column;
     text-align: left;
-    gap: 1vh;
 `;
 
 export const Button = styled.button`
@@ -128,4 +124,13 @@ export const MsgContainer = styled.div`
     margin-top: 2vh;
     align-items: center;
     justify-content: center;
+`;
+
+export const Error = styled.p`
+    min-height: 4vh;
+    margin: 0;
+    text-transform: none;
+    color: red;
+    font-size: small;
+    padding-top: 1vh;
 `;
