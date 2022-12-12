@@ -10,8 +10,10 @@ import {
     Required,
     Right,
     Left,
-    Error
+    Error,
+    Link
 } from '../styles/ContactInfoStyles';
+import { MdOutlineMailOutline } from 'react-icons/md';
 import { IsMobileContext } from '../context/IsMobileContext';
 import MobileContactInfo from '../mobile-components/MobileContactInfo';
 
@@ -74,10 +76,19 @@ function ContactInfo() {
     return (
         <Container>
             <Left>
-                <h2>Contact</h2>
+                <h3 style={{color: '#6819fc', textTransform: 'uppercase'}}>Contact</h3>
                 <h1>Looking for a new developer or just want to chat?</h1>
                 <p>Send me a message to get the process started.</p>
-                <p>elilogbro@gmail.com</p>
+                <Link href="mailto:elilogbro@gmail.com">
+                    <MdOutlineMailOutline
+                        style={{
+                            fontSize: 'large',
+                            verticalAlign: 'text-bottom',
+                            marginRight: '0.5vw'
+                        }}
+                    />
+                    elilogbro@gmail.com
+                </Link>
             </Left>
             <Right onSubmit={sendEmail}>
                 <Row>
@@ -122,7 +133,7 @@ function ContactInfo() {
                         <Error>{errorLocation.message && "Message is empty."}</Error>
                     </Column>
                 </Row>
-                <Button type="submit">Send</Button>
+                <Button type="submit" disabled={!isValid}>Send</Button>
             </Right>
         </Container>
     )

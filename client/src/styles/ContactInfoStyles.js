@@ -25,6 +25,7 @@ export const Left = styled.div`
     width: fit-content;
     text-align: left;
     justify-content: center;
+    gap: 3vh;
 `;
 
 export const Input = styled.input`
@@ -36,7 +37,7 @@ export const Input = styled.input`
     color: white;
     background-color: #1f2731;
     background-clip: padding-box;
-    border: ${props => props.error ? "1px solid red" : "1px solid #ced4da"};
+    border: ${props => props.error ? "1.5px solid #e0405c" : "1.5px solid #ced4da"};
     appearance: none;
     border-radius: 4px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -58,7 +59,7 @@ export const MessageInput = styled.textarea`
     color: white;
     background-color: #1f2731;
     background-clip: padding-box;
-    border: ${props => props.error ? "1px solid red" : "1px solid #ced4da"};
+    border: ${props => props.error ? "1.5px solid #e0405c" : "1.5px solid #ced4da"};
     appearance: none;
     border-radius: 4px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -130,7 +131,17 @@ export const Error = styled.p`
     min-height: 4vh;
     margin: 0;
     text-transform: none;
-    color: red;
+    color: #e0405c;
     font-size: small;
     padding-top: 1vh;
+`;
+
+export const Link = styled.a`
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    :hover{
+        color: #6819fc;
+        cursor: pointer
+    }
 `;
