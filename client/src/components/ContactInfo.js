@@ -26,10 +26,15 @@ function ContactInfo() {
         from_email: "",
         message: ""
     };
-    
+
+    const falsyFormData = {
+        from_name: false,
+        from_email: false,
+        message: false
+    }
+
     const [formData, setFormData] = useState(initialFormData);
-    const [error, setError] = useState(null);
-    const [confirmation, setConfirmation] = useState(null);
+    const [errorLocation, setErrorLocation] = useState(falsyFormData);
     
     if (isMobile) {
         return <MobileContactInfo />
@@ -38,6 +43,10 @@ function ContactInfo() {
     const handleFormChange = (e) => {
         const key = e.target.name
         const value = e.target.value
+
+        if (formData[key] !== "") {
+            setErrorLocation({...errorLocation, [key] : false})
+        }
 
         setFormData({...formData, [key] : value})
     };
@@ -51,19 +60,19 @@ function ContactInfo() {
             emailjs.sendForm('service_v3bpdl8', 'template_4nl0spn', e.target, 'EhI_xZcAYhshS9nyo')
             .then(() => {
                 setFormData(initialFormData);
-                setConfirmation("Your message has been received!");
             });
-        }
-        else {
-            setError("Please fill out the required fields");
         };
     };
 
-    const handleMessages = () => {
-        setError(null);
-        setConfirmation(null);
-    };
-  
+    const handleErrors = (e) => {
+        const currentKey = e.target.name
+
+        if (formData[currentKey] === "") {
+            setErrorLocation({...errorLocation, [currentKey] : true})
+        }
+        
+    }
+    
     return (
         <Container>
             <Left>
@@ -80,9 +89,10 @@ function ContactInfo() {
                             type="text"
                             name="from_name"
                             value={formData.from_name}
-                            onClick={handleMessages}
                             onChange={handleFormChange}
+                            onClick={handleErrors}
                         />
+                        <p>{errorLocation.from_name && "Name is empty."}</p>
                     </Column>
                 </Row>
                 <Row>
@@ -92,9 +102,10 @@ function ContactInfo() {
                             type="email"
                             name="from_email"
                             value={formData.from_email}
-                            onClick={handleMessages}
-                            onChange={handleFormChange}    
+                            onChange={handleFormChange}
+                            onClick={handleErrors}
                         />
+                        <p>{errorLocation.from_email && "Email is empty."}</p>
                     </Column>
                 </Row>
                 <Row>
@@ -104,36 +115,13 @@ function ContactInfo() {
                             type="text"
                             name="message"
                             value={formData.message}
-                            onClick={handleMessages}
                             onChange={handleFormChange}
+                            onClick={handleErrors}
                         />
+                        <p>{errorLocation.message && "Message is empty."}</p>
                     </Column>
                 </Row>
                 <Button type="submit">Send</Button>
-                {error &&
-                    <MsgContainer>
-                        <AiFillExclamationCircle
-                            style={{
-                                color: 'red',
-                                fontSize: '20px',
-                                marginRight: '0.5vw'
-                            }}
-                        />
-                        {error}
-                    </MsgContainer>
-                }
-                {confirmation &&
-                    <MsgContainer>
-                        <BsHandThumbsUp
-                            style={{
-                                color: '#00e64d',
-                                fontSize: '18px',
-                                marginRight: '0.5vw'
-                            }}
-                        />
-                        {confirmation}
-                    </MsgContainer>
-                }
             </Right>
         </Container>
     )

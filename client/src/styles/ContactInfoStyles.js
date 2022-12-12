@@ -16,6 +16,7 @@ export const Container = styled.div`
     flex-direction: row;
     gap: 8vw;
     height: 100vh;
+    color: white;
 `;
 
 export const Left = styled.div`
@@ -32,8 +33,8 @@ export const Input = styled.input`
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
     width: 36vw;
+    color: white;
     background-color: #1f2731;
     background-clip: padding-box;
     border: 1px solid #ced4da;
@@ -41,7 +42,7 @@ export const Input = styled.input`
     border-radius: 4px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     :focus{
-        color: #212529;
+        color: white;
         background-color: #1f2731;
         border-color: #6819fc;
         outline: 0;
@@ -56,7 +57,7 @@ export const MessageInput = styled.textarea`
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    color: white;
     background-color: #1f2731;
     background-clip: padding-box;
     border: 1px solid #ced4da;
@@ -64,7 +65,7 @@ export const MessageInput = styled.textarea`
     border-radius: 4px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     :focus{
-        color: #212529;
+        color: white;
         background-color: #1f2731;
         border-color: #6819fc;
         outline: 0;
