@@ -6,6 +6,7 @@ export const Container = styled.div`
     flex-direction: column;
     gap: 10vh;
     align-items: center;
+    justify-content: center;
     width: 100%;
 `;
 
@@ -20,6 +21,8 @@ export const Header = styled.div`
     gap: 2vh;
     text-align: center;
     font-size: x-large;
+    padding-left: 2vw;
+    padding-right: 2vw;
 `;
 
 export const SubContainer = styled.div`
@@ -29,7 +32,7 @@ export const SubContainer = styled.div`
     margin-bottom: 12vh;
     font-size: x-large;
     width: 100vw;
-    align-items: center;
+    text-align: center;
 `;
 
 export const Details = styled.div`
@@ -37,4 +40,5 @@ export const Details = styled.div`
     flex-direction: column;
     width: 98%;
     gap: 3vh;
+    color: #919497;
 `;
