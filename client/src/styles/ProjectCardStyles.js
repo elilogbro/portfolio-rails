@@ -12,10 +12,11 @@ export const Container = styled.div`
 export const SubContainer = styled.div`
     flex-direction: column;
     text-align: left;
-    margin-left: 4vw;
+    margin-left: 8vw;
     display: flex;
     gap: 4vh;
     width: 40vw;
+    font-size: large;
 `
 
 export const SubContainer2 = styled.div`

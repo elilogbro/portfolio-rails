@@ -67,13 +67,13 @@ function ProjectCard({ project }) {
                 </IconContainer>
                 <LinkContainer>
                     <a href={project.github_url}>
-                        <AiFillGithub className="icon" />
+                        <AiFillGithub className="github" />
                     </a>
                 </LinkContainer>
             </SubContainer2>
             <SubContainer>
-                <h2 style={{fontFamily: 'Montserrat, sans-serif'}}>{project.name}</h2>
-                <p style={{fontFamily: 'Poppins, sans-serif'}}>{project.details}</p>
+                <h2 style={{fontFamily: 'Azeret Mono, monospace', color: '#6819fc'}}>{project.name}</h2>
+                <p style={{fontFamily: 'Roboto Condensed, sans-serif'}}>{project.details}</p>
             </SubContainer>
         </Container>
     )
