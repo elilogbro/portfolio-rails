@@ -76,10 +76,9 @@ function ProjectCard({ project }) {
             <SubContainer>
                 <h2 style={{fontFamily: 'Azeret Mono, monospace', color: '#6819fc'}}>
                     <Typewriter
-                        options={{
-                            strings: [project.name],
-                            autoStart: true,
-                            loop: true,
+                        onInit={(typewriter) => {
+                            typewriter.typeString(project.name)
+                            .start();
                         }}
                     />
                 </h2>
