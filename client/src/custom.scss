@@ -53,8 +53,6 @@
 .text-center {
     text-align-last: start;
     display: flex;
-    height: 74vh;
-    margin-top: 26vh;
 }
 
 .routes-container {
@@ -73,9 +71,14 @@
 }
 
 .details-container {
-    margin-top: 9vh;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
     text-align: left;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Azeret Mono', monospace;
+    gap: 1vh;
+    width: fit-content;
+    padding-top: 12vh;
 }
 
 .icon {

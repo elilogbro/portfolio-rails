@@ -16,6 +16,7 @@ export const Container = styled.div`
     gap: 8vw;
     height: 100vh;
     color: white;
+    font-family: 'Roboto Condensed', sans-serif;
 `;
 
 export const Left = styled.div`
@@ -140,6 +141,7 @@ export const Link = styled.a`
     width: fit-content;
     text-decoration: none;
     color: white;
+    font-size: large;
     :hover{
         color: #6819fc;
         cursor: pointer

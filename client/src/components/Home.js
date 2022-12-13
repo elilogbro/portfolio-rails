@@ -36,12 +36,11 @@ function Home() {
                     className="image"
                 />
                 <Col className="details-container">
-                    <h4><strong>Hi there! I'm</strong></h4>
-                    <h2 style={{marginLeft: '4vw'}}><strong><span style={{color: "#6819fc"}}>Eliott</span></strong> Brown</h2>
-                    <p style={{color: '#919497'}}>A <strong><span style={{color: "#6819fc"}}>Full-Stack Software Engineer</span></strong> passionate about creating unique software solutions</p>
+                    <h3><strong>Hi there! I'm <span style={{color: "#6819fc"}}>Eliott</span></strong> Brown</h3>
+                    <h4 style={{color: '#919497', fontFamily: 'Roboto Condensed, sans-serif'}}>A <strong><span style={{color: "#6819fc"}}>Full-Stack Software Engineer</span></strong> passionate about creating unique software solutions</h4>
                     <LinksContainer>
                         <Button onClick={handleButtonClick}>
-                            Resume <HiViewList />
+                            Resume <HiViewList style={{verticalAlign: 'top'}}/>
                         </Button>
                         {clicked && <Dropdown mobile="false"/>}
                     </LinksContainer>

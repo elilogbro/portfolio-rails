@@ -4,8 +4,6 @@ export const Container = styled.div`
     top: 100%;
     left: 0;
     z-index: 2;
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
     width: auto;
     text-align: left;
 `;
@@ -28,7 +26,8 @@ export const ListItem = styled.li`
 export const ModalContainer = styled.div`
     display: flex;
     width: 70vw;
-    height: 90vh;
+    height: 86vh;
+    margin-top: 2vh;
 `;
 
 export const Row = styled.div`
@@ -36,7 +35,6 @@ export const Row = styled.div`
 `;
 
 export const TextContainer = styled.div`
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     background-color: white;
     padding: 1em;
 `;

@@ -78,12 +78,11 @@ function ContactInfo() {
             <Left>
                 <h3 style={{color: '#6819fc', textTransform: 'uppercase'}}>Contact</h3>
                 <h1>Looking for a new developer or just want to chat?</h1>
-                <p>Send me a message to get the process started.</p>
+                <p style={{color: '#919497', fontSize: 'large'}}>Send me a message to get the process started.</p>
                 <Link href="mailto:elilogbro@gmail.com">
                     <MdOutlineMailOutline
                         style={{
-                            fontSize: 'large',
-                            verticalAlign: 'text-bottom',
+                            fontSize: '1.25em',
                             marginRight: '0.5vw'
                         }}
                     />

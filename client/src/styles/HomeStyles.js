@@ -4,16 +4,16 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    height: 100%;
 `;
 
 export const LinksContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 100%;
-    align-items: center;
-    padding-right: 8vw;
+    align-items: left;
     min-height: 20vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 `;
 
 export const Column = styled.div`
@@ -23,8 +23,8 @@ export const Button = styled.button`
     display: inline-block;
     outline: none;
     cursor: pointer;
-    width: ${props => props.mobile && "fit-content"};
-    font-size: ${props => props.mobile ? "1.25em" : "1em"};
+    width: fit-content;
+    font-size: ${props => props.mobile ? "1.25em" : "0.9em"};
     line-height: 1;
     border-radius: 500px;
     transition-property: background-color,border-color,color,box-shadow,filter;
@@ -36,7 +36,7 @@ export const Button = styled.button`
     font-weight: 700;
     text-align: center;
     vertical-align: middle;
-    padding: ${props => props.mobile ? "1vw 2vw" : "14px 18px"};
+    padding: ${props => props.mobile ? "1vw 2vw" : "10px 14px"};
     color: #0f1922;
     background-color: white;
     height: 48px;
