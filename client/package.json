@@ -15,7 +15,8 @@
     "react-scripts": "5.0.1",
     "reactjs-popup": "^2.0.5",
     "sass": "^1.56.1",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "typewriter-effect": "^2.19.0"
   },
   "scripts": {
     "start": "PORT=3006 react-scripts start",

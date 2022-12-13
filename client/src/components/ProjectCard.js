@@ -16,6 +16,7 @@ import { VscJson } from 'react-icons/vsc';
 import { DiRuby } from 'react-icons/di';
 import { FaRedhat } from 'react-icons/fa';
 import { FaCookieBite } from 'react-icons/fa';
+import Typewriter from "typewriter-effect";
 
 function ProjectCard({ project }) {
 
@@ -58,6 +59,7 @@ function ProjectCard({ project }) {
         findLogo(technology)
     )
 
+
     return (
         <Container>
             <IFrame project={project} />
@@ -72,7 +74,15 @@ function ProjectCard({ project }) {
                 </LinkContainer>
             </SubContainer2>
             <SubContainer>
-                <h2 style={{fontFamily: 'Azeret Mono, monospace', color: '#6819fc'}}>{project.name}</h2>
+                <h2 style={{fontFamily: 'Azeret Mono, monospace', color: '#6819fc'}}>
+                    <Typewriter
+                        options={{
+                            strings: [project.name],
+                            autoStart: true,
+                            loop: true,
+                        }}
+                    />
+                </h2>
                 <p style={{fontFamily: 'Roboto Condensed, sans-serif'}}>{project.details}</p>
             </SubContainer>
         </Container>
