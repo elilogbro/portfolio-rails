@@ -16,13 +16,16 @@ export const Container = styled.div`
 
 export const Header = styled.div`
     text-align: center;
-    font-size: large;
+    font-size: x-large;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 2vh;
 `;
 
 export const SubContainer = styled.div`
     display: flex;
     flex-direction: row;
     gap: 2vw;
-    font-family: Poppins, sans-serif;
     font-size: large;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #919497;
 `;
