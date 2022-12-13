@@ -1,14 +1,37 @@
 import styled from 'styled-components';
 
-export const Container = styled.form`
+export const Bottom = styled.form`
     display: flex;
     flex-direction: column;
-    padding-top: 10vh;
-    width: 100%;
+    height: 100%;
+    width: fit-content;
+    justify-content: center;
+    align-self: center;
+    text-transform: uppercase;
+    padding-bottom: 12vh;
+`;
+
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 8vw;
     height: 100vh;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 4vh;
+    width: 100%;
+    padding-left: 2vw;
+    padding-right: 2vw;
     align-items: center;
-    gap: 2vh;
-    font-size: x-large;
+`;
+
+export const Top = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: fit-content;
+    align-items: center;
+    gap: 3vh;
 `;
 
 export const Input = styled.input`
@@ -16,73 +39,86 @@ export const Input = styled.input`
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
-    width: 100%;
-    height: 6vh;
-    background-color: #fff;
+    width: 90vw;
+    color: white;
+    background-color: #1f2731;
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+    border: ${props => props.error ? "1.5px solid #e0405c" : "1.5px solid #ced4da"};
     appearance: none;
     border-radius: 4px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     :focus{
-        color: #212529;
-        background-color: #fff;
-        border-color: #00C542;
+        color: white;
+        background-color: #1f2731;
+        border-color: #6819fc;
         outline: 0;
-        box-shadow: 0 0 0 0.25rem rgb(0 197 66 / 25%);
     }
-`;
-
-export const Row = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-    width: 90vw;
 `;
 
 export const MessageInput = styled.textarea`
-    width: 100%;
-    height: 26vh;
+    width: 90vw;
+    height: 16vh;
     padding: 6px 12px;
-    font-size: x-large;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
+    color: white;
+    background-color: #1f2731;
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+    border: ${props => props.error ? "1.5px solid #e0405c" : "1.5px solid #ced4da"};
     appearance: none;
     border-radius: 4px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     :focus{
-        color: #212529;
-        background-color: #fff;
-        border-color: #00C542;
+        color: white;
+        background-color: #1f2731;
+        border-color: #6819fc;
         outline: 0;
-        box-shadow: 0 0 0 0.25rem rgb(0 197 66 / 25%);
     }
+`
+
+export const Row = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    justify-content: flex-start;
+    margin: 2vh;
+`;
+
+export const Column = styled.div`
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 `;
 
 export const Button = styled.button`
+    display: inline-block;
     outline: none;
     cursor: pointer;
-    font-weight: 500;
-    border: 1px solid transparent;
-    border-radius: 1.5em;
-    height: fit-content;
     width: fit-content;
-    min-width: 20vw;
-    align-self: center;
-    color: #ffffff;
-    background-color: #00C542;
-    transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
-    padding: 1vw 2vw;
-    :hover {
-        color: #ffffff;
-        background-color: #00e64d;
+    padding: 14px 18px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    color: #0f1922;
+    background-color: white;
+    height: 48px;
+    :hover{
+        color: #fff;
+        background-color: transparent;
+        border-color: #6819fc;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgb(104 25 252 / 25%);
     }
-    margin-top: 0.5vh;
+    align-self: center;
 `;
 
 export const Required = styled.span`
@@ -91,6 +127,28 @@ export const Required = styled.span`
 
 export const MsgContainer = styled.div`
     display: flex;
+    align-self: center;
+    margin-top: 2vh;
     align-items: center;
-    padding
+    justify-content: center;
+`;
+
+export const Error = styled.p`
+    min-height: 4vh;
+    margin: 0;
+    text-transform: none;
+    color: #e0405c;
+    font-size: small;
+    padding-top: 1vh;
+`;
+
+export const Link = styled.a`
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    :hover{
+        color: #6819fc;
+        cursor: pointer
+    }
 `;
