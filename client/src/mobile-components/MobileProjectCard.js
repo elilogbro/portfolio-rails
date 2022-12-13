@@ -11,6 +11,7 @@ import { VscJson } from 'react-icons/vsc';
 import { DiRuby } from 'react-icons/di';
 import { FaRedhat } from 'react-icons/fa';
 import { FaCookieBite } from 'react-icons/fa';
+import Typewriter from "typewriter-effect";
 
 function MobileProjectCard({project}) {
 
@@ -54,8 +55,15 @@ function MobileProjectCard({project}) {
                 {renderTechnologies}
             </SubContainer2>
             <SubContainer>
-                <h1>{project.name}</h1>
-                <p>{project.details}</p>
+                <h2 style={{fontFamily: 'Azeret Mono, monospace', color: '#6819fc'}}>
+                    <Typewriter
+                        onInit={(typewriter) => {
+                            typewriter.typeString(project.name)
+                            .start();
+                        }}
+                    />
+                </h2>
+                <p style={{fontFamily: 'Roboto Condensed, sans-serif'}}>{project.details}</p>
                 <a href={project.github_url}>
                     <AiFillGithub className="icon" style={{width: '40vw', height: '8vh'}}/>
                 </a>
