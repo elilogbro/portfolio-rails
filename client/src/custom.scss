@@ -98,7 +98,7 @@
 
 .mobile-icon {
     width: 12vw;
-    color:  #00C542;
+    color:  white;
     height: auto;
     padding: 0.4vw;
     margin: 1vw;
@@ -107,7 +107,7 @@
 }
 
 .navbar-mobile {
-    background-color: #00C542;
+    background-color: #0F1922;
     height: 8vh;
     width: 70vw; 
     display: flex;
@@ -121,6 +121,7 @@
     justify-content: center;
     border-radius: 2em;
     vertical-align: middle;
+    opacity: .92;
 }
 
 .logo, .github {

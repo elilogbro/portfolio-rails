@@ -26,6 +26,6 @@ export const Image = styled.img`
     width: auto;
     height: 30vh;
     border-radius: 50%;
-    box-shadow: 0.6vw 0 0 0px #00e64d, 1.4vw 0 0 0px #99F5B7, 2.2vw 0 0 0px #CCFADB;
+    box-shadow: 0.8vw 0 0 0px #6819fc, 1.6vw 0 0 0px #3e0f97, 2.4vw 0 0 0px #273038;
     margin: 2em;
 `;

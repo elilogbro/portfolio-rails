@@ -31,13 +31,12 @@ function MobileHome() {
                     alt="me"
                 />
                 <Row>
-                    <h4>Hi there! I'm</h4>
-                    <h2><span style={{color: "#00C542"}}>Eliott</span> Brown</h2>
-                    <p>A <strong><span style={{color: "#00C542"}}>Full-Stack Software Engineer</span></strong> passionate about creating unique software solutions</p>
+                <h3><strong>Hi there! I'm <span style={{color: "#6819fc"}}>Eliott</span></strong> Brown</h3>
+                    <h4 style={{color: '#919497', fontFamily: 'Roboto Condensed, sans-serif'}}>A <strong><span style={{color: "#6819fc"}}>Full-Stack Software Engineer</span></strong> passionate about creating unique software solutions</h4>
                     <LinksContainer>
                         <Column>
                             <Button onClick={handleButtonClick} mobile="true">
-                                Resume <HiViewList />
+                                Resume <HiViewList style={{verticalAlign: 'sub'}}/>
                             </Button>
                             {clicked && <Dropdown mobile="true"/>}
                         </Column>

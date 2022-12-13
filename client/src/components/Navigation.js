@@ -14,16 +14,6 @@ import {
 
 function Navigation() {
 
-    let activeStyle = {
-        textDecoration: "underline",
-        color: 'white'
-    }
-
-    let inactiveStyle = {
-        textDecoration: 'none',
-        color: 'white'
-    }
-
     const { isMobile } = useContext(IsMobileContext);
 
     if (isMobile) {
