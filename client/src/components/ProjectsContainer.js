@@ -10,18 +10,16 @@ import MobileProjectsContainer from '../mobile-components/MobileProjectsContaine
 function ProjectsContainer() {
 
     const { isMobile } = useContext(IsMobileContext);
-    
+
     let location = useLocation();
     const [projects, setProjects] = useState(null);
-    
-    useEffect(() => {
 
-        fetch('/projects')
+        useEffect(() => {
+            fetch('/projects')
             .then(res => res.json())
             .then(projects => setProjects(projects))
-        }, [location]
-    )
-        
+        }, [location])
+
     if (isMobile) {
         return (<MobileProjectsContainer projects={projects} />)
     }
